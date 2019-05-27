@@ -45,7 +45,7 @@ h1 {
     font-size: 4rem !important;
     padding-bottom: 0.2rem;
     /* word-spacing: 1.2rem; */
-    color: ${GlobalColors.PrimaryRed};
+    color: ${GlobalColors.PrimaryGreen};
     /* border-bottom: 1px solid #349dc4; */
 
     @media only screen and (max-width: ${GlobalSizes.ScreenWidth}) {

@@ -156,10 +156,15 @@ const Navbar = props => {
 
   return (
     <NavContainer>
+      <NavLink to="/">
+        <LogoContainer>
+          <Logo>
+            <Icon size="big" name="code branch" />
+          </Logo>
+          <CompanyName>The Code Learning Project</CompanyName>
+        </LogoContainer>
+      </NavLink>
       <NavMenu>
-        <MenuItem>
-          <Icon size="big" name="code branch" />
-        </MenuItem>
         {compactNavMenu()}
         {centerNavItems(props.textColor)}
         {/* {rightNavItems(props.textColor)} */}
@@ -179,7 +184,7 @@ const NavMenu = styled.div`
   margin-left: 6rem;
   background-color: rgba(0, 0, 0, 0);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 const CompactNavContainer = styled.div`
@@ -208,11 +213,12 @@ const ActiveMenuItem = styled.div`
 
 const Item = styled.p`
   display: block;
-  color: ${props => props.textColor || GlobalColors.PrimaryWhite};
+  color: ${props => props.textColor || GlobalColors.PrimaryGrey};
   text-align: center;
   padding: 10px 16px 5px 16px;
   text-decoration: none;
   z-index: 1;
+  letter-spacing: 1px !important;
 `;
 
 const SupportLink = styled.a`
@@ -221,20 +227,25 @@ const SupportLink = styled.a`
   }
 `;
 
-const Logo = styled.img`
+const LogoContainer = styled.div`
   position: absolute;
   top: 1.5rem;
   left: 2rem;
-  height: 4rem;
-  width: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 `;
 
-const CompanyName = styled.div`
-  padding-left: 1rem;
-  padding-top: 0.3rem;
-  color: #f2f2f2 !important;
-  font-size: 1.8rem !important;
+const Logo = styled.div`
+  /* height: 4rem;
+  width: 4rem; */
+`;
+
+const CompanyName = styled.h1`
+  font-size: 1.6rem !important;
   border: none;
+  margin: 0;
+  letter-spacing: 0.5px !important;
 `;
 
 const RightMenu = styled.div`
@@ -250,14 +261,23 @@ const RightMenu = styled.div`
   }
 `;
 
+// const CenterContainer = styled.div`
+//   position: absolute;
+//   top: 1.5rem;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
+
 const CenterMenu = styled.div`
-  position: relative;
   text-align: center;
   border-bottom: 5px !important;
   display: flex;
   justify-content: center;
-  padding: 2rem 2rem 1rem 2rem;
-  padding-left: 15%;
+  padding-top: 1.5rem;
+  /* padding: 2rem 2rem 1rem 2rem; */
+  /* padding-left: 15%; */
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     display: none;

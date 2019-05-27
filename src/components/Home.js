@@ -11,7 +11,7 @@ const Home = () => {
         <TopContainer>
           <LeftTextContainer>
             <InnerTextContainer>
-              <PrimaryText>Audio Grenade</PrimaryText>
+              <PrimaryText>The Code Learning Project</PrimaryText>
               <SecondaryText>
                 A unique, useful gift for your best clients and employees
               </SecondaryText>
