@@ -5,14 +5,14 @@ const GlobalColors = {
   PrimaryBlack: "#1C1C1C",
   PrimaryGrey: "#424242",
   SecondaryGrey: "#d3d3d3",
-  PrimaryRed: "#FF6B5F",
-  SecondaryRed: "#FF948C",
-  PrimaryOrange: "#FFBD5F",
-  SecondaryOrange: "#FFDBA8",
-  PrimaryGreen: "#A5FAB4",
-  SecondaryGreen: "#8CFFA0",
-  SecondaryBlue: "#A9D3F8",
-  PrimaryBlue: "#6AB9FF"
+  PrimaryRed: "#E27365",
+  SecondaryRed: "#FFA498",
+  PrimaryOrange: "#E2A365",
+  SecondaryOrange: "#FFCB98",
+  PrimaryGreen: "#4BA964",
+  SecondaryGreen: "#A8DEB6",
+  PrimaryBlue: "#407E8C",
+  SecondaryBlue: "#9DC5CE",
 };
 
 const GlobalSizes = {
@@ -20,12 +20,10 @@ const GlobalSizes = {
 };
 
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 * {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: inherit !important;
@@ -41,7 +39,7 @@ body {
 }
 
 h1 {
-    font-family: 'Bungee Shade', cursive !important;
+    font-family: 'Ubuntu', sans-serif !important;
     letter-spacing: 2px !important;
     font-weight: 1200 !important;
     font-size: 4rem !important;
