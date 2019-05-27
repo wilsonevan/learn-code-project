@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const globalColors = {
+const GlobalColors = {
   PrimaryWhite: "#F2F2F2",
   PrimaryBlack: "#1C1C1C",
   PrimaryGrey: "#424242",
@@ -15,9 +15,9 @@ const globalColors = {
   PrimaryBlue: "#6AB9FF"
 };
 
-const globalSizes = {
-    ScreenWidth: "800px"
-}
+const GlobalSizes = {
+  ScreenWidth: "800px"
+};
 
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
@@ -37,7 +37,7 @@ body {
     letter-spacing: 1.25px !important;
     font-weight: 300 !important;
     background: #F2F2F2 !important;
-    color: ${globalColors.PrimaryGrey};
+    color: ${GlobalColors.PrimaryGrey};
 }
 
 h1 {
@@ -47,10 +47,10 @@ h1 {
     font-size: 4rem !important;
     padding-bottom: 0.2rem;
     /* word-spacing: 1.2rem; */
-    color: ${globalColors.PrimaryRed};
+    color: ${GlobalColors.PrimaryRed};
     /* border-bottom: 1px solid #349dc4; */
 
-    @media only screen and (max-width: ${globalSizes.ScreenWidth}) {
+    @media only screen and (max-width: ${GlobalSizes.ScreenWidth}) {
         font-size: 3rem !important;
     };
 }
@@ -61,8 +61,8 @@ input, select, textarea {
     /* font-family: Montserrat, san-serif; */
     font-weight: 300 !important;
     letter-spacing: 1.25px !important;
-    color: ${globalColors.PrimaryGrey};
+    color: ${GlobalColors.PrimaryGrey};
 }
 `;
 
-export { GlobalStyles, globalColors, globalSizes };
+export { GlobalStyles, GlobalColors, GlobalSizes };

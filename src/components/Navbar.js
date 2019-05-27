@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { AuthConsumer } from "../../providers/AuthProvider";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../../images/logo.svg";
 // import "./HomeNav.css";
-import { Dropdown } from "semantic-ui-react";
-import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
+import { Dropdown, Icon } from "semantic-ui-react";
+import { GlobalColors, GlobalSizes } from "../styles/GlobalStyles";
 
 const Navbar = props => {
   const [activeItem, setActiveItem] = useState(0);
@@ -40,9 +38,9 @@ const Navbar = props => {
     return (
       <>
         <CenterMenu>
-          <NavLink to="/">
+          <NavLink to="/use-cases ">
             <MenuItem as={isActive(1)} onClick={() => activateItem(1)}>
-              <Item textColor={textColor}>Home</Item>
+              <Item textColor={textColor}>Use Cases</Item>
             </MenuItem>
           </NavLink>
           <NavLink to="/features">
@@ -50,9 +48,14 @@ const Navbar = props => {
               <Item textColor={textColor}>Features</Item>
             </MenuItem>
           </NavLink>
-          <NavLink to="/pricing">
+          <NavLink to="/docs">
             <MenuItem as={isActive(3)} onClick={() => activateItem(3)}>
-              <Item textColor={textColor}>Pricing</Item>
+              <Item textColor={textColor}>Docs</Item>
+            </MenuItem>
+          </NavLink>
+          <NavLink to="/contact">
+            <MenuItem as={isActive(4)} onClick={() => activateItem(4)}>
+              <Item textColor={textColor}>Contact</Item>
             </MenuItem>
           </NavLink>
         </CenterMenu>
@@ -60,50 +63,25 @@ const Navbar = props => {
     );
   };
 
-  const rightNavItems = textColor => {
-    const {
-      auth: { user, handleLogout },
-      history
-    } = props;
-
-    if (user) {
-      return (
-        <>
-          <RightMenu>
-            <NavLink to="/dashboard" onClick={() => activateItem(1)}>
-              <MenuItem as={isActive(1)}>
-                <Item textColor={textColor}>
-                  {user.admin ? "Admin Dashboard" : "Dashboard"}
-                </Item>
-              </MenuItem>
-            </NavLink>
-            <NavLink to="/login" onClick={() => handleLogout(history)}>
-              <MenuItem>
-                <Item textColor={textColor}>Logout</Item>
-              </MenuItem>
-            </NavLink>
-          </RightMenu>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <RightMenu>
-            <NavLink to="/login" onClick={() => activateItem(4)}>
-              <MenuItem as={isActive(4)}>
-                <Item textColor={textColor}>Login</Item>
-              </MenuItem>
-            </NavLink>
-            <NavLink to="/register" onClick={() => activateItem(5)}>
-              <MenuItem as={isActive(5)}>
-                <Item textColor={textColor}>Register</Item>
-              </MenuItem>
-            </NavLink>
-          </RightMenu>
-        </>
-      );
-    }
-  };
+  // const rightNavItems = textColor => {
+  //   return (
+  //     <>
+  //       <RightMenu>
+  //         <NavLink to="/dashboard" onClick={() => activateItem(1)}>
+  //           <MenuItem as={isActive(1)}>
+  //             <Item textColor={textColor}>
+  //             </Item>
+  //           </MenuItem>
+  //         </NavLink>
+  //         <NavLink to="/login">
+  //           <MenuItem>
+  //             <Item textColor={textColor}>Logout</Item>
+  //           </MenuItem>
+  //         </NavLink>
+  //       </RightMenu>
+  //     </>
+  //   );
+  // };
 
   const compactNavMenu = () => {
     return (
@@ -180,11 +158,11 @@ const Navbar = props => {
     <NavContainer>
       <NavMenu>
         <MenuItem>
-          <Logo src={logo} alt="logo" className="App-logo" />
+          <Icon size="big" name="code branch" />
         </MenuItem>
         {compactNavMenu()}
         {centerNavItems(props.textColor)}
-        {rightNavItems(props.textColor)}
+        {/* {rightNavItems(props.textColor)} */}
       </NavMenu>
     </NavContainer>
   );
@@ -286,8 +264,4 @@ const CenterMenu = styled.div`
   }
 `;
 
-const ConnectedNavbar = props => (
-  <AuthConsumer>{value => <Navbar {...props} auth={value} />}</AuthConsumer>
-);
-
-export default ConnectedNavbar;
+export default Navbar;
