@@ -2,12 +2,16 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
 import { Icon } from "semantic-ui-react";
+import Image1 from "../../images/nesa-by-makers-736784-gradient.jpg";
 
 const Features = () => {
   return (
     <>
       <Container>
-        <Header>Key Features</Header>
+        <HeaderContainer>
+          <Header>Key Features</Header>
+          <HeaderImage src={Image1} />
+        </HeaderContainer>
         <InnerContainer>
           <FeatureContainer>
             <FeatureIcon>
@@ -22,7 +26,7 @@ const Features = () => {
 
           <FeatureContainer>
             <FeatureIcon>
-              <Icon size="huge" name="assistive listening systems" />
+              <Icon size="huge" name="help" />
             </FeatureIcon>
             <FeatureHeader>Student Help Portal</FeatureHeader>
             <FeatureText>
@@ -68,9 +72,7 @@ const Features = () => {
             <FeatureIcon>
               <Icon size="huge" name="laptop" />
             </FeatureIcon>
-            <FeatureHeader>
-              Direct GitHub Repo Submissions
-            </FeatureHeader>
+            <FeatureHeader>Direct GitHub Repo Submissions</FeatureHeader>
             <FeatureText>
               Integrated text editor with syntax recommendations used for easily
               typing and grading code for quiz questions and assignments.
@@ -89,12 +91,38 @@ const Container = styled.div`
   align-items: flex-start;
   min-height: 70vh;
   width: 100vw;
-  padding-left: 5rem;
-  padding-right: 5rem;
   margin-bottom: 8rem;
 `;
 
-const Header = styled.h1``;
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 3rem;
+`;
+
+const Header = styled.h1`
+  background-color: ${GlobalColors.PrimaryWhite};
+  z-index: 2;
+  padding-left: 5rem;
+  padding-top: 5rem;
+`;
+
+const HeaderImage = styled.img`
+  width: 60%;
+  height: auto;
+
+  /* &:after {
+    display: inline;
+    position: relative;
+    background-image: linear-gradient(to left, white 0%, #fff 100%);
+    margin-top: 150px;
+    height: 150px;
+    width: 100%;
+    content: "";
+  } */
+`;
 
 const InnerContainer = styled.div`
   display: flex;
@@ -104,6 +132,8 @@ const InnerContainer = styled.div`
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 3rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 
   /* height: 100vh; */
   width: 100%;

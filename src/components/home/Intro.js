@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 // import { Link } from "react-router-dom";
 import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
+import { Icon } from "semantic-ui-react";
 
 const Intro = () => {
   return (
@@ -21,16 +22,28 @@ const Intro = () => {
         </LeftTextContainer>
         <RightTextContainer>
           <NavLink>
-            <LinkText>Join Slack</LinkText>
+            <LinkContainer>
+              <Icon size="huge" name="slack" />
+              <LinkText>Join Slack</LinkText>
+            </LinkContainer>
           </NavLink>
           <NavLink>
-            <LinkText>See us on GitHub</LinkText>
+            <LinkContainer>
+              <Icon size="huge" name="github" />
+              <LinkText>See us on GitHub</LinkText>
+            </LinkContainer>
           </NavLink>
           <NavLink>
-            <LinkText>Start a New Project</LinkText>
+            <LinkContainer>
+              <Icon size="huge" name="rocket" />
+              <LinkText>Start a New Project</LinkText>
+            </LinkContainer>
           </NavLink>
           <NavLink>
-            <LinkText>Get Tech Support</LinkText>
+            <LinkContainer>
+              <Icon size="huge" name="life ring outline" />
+              <LinkText>Get Tech Support</LinkText>
+            </LinkContainer>
           </NavLink>
         </RightTextContainer>
       </Container>
@@ -113,11 +126,19 @@ const PrimaryText = styled.h1`
   }
 `;
 
+const LinkContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+`;
+
 const LinkText = styled.h2`
   text-align: left;
   font-size: 2.5rem !important;
-  padding: 0.6rem;
   font-weight: 500 !important;
+  margin: 0;
+  padding-left: 0.5rem;
 `;
 
 const SecondaryText = styled.h2`
