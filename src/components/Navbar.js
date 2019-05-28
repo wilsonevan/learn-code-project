@@ -12,13 +12,13 @@ const Navbar = props => {
     const url = window.location.pathname;
     switch (url) {
       case "/":
+        setActiveItem(0);
+        break;
+      case "/use-cases":
         setActiveItem(1);
         break;
-      case "/features":
+      case "/documentation":
         setActiveItem(2);
-        break;
-      case "/pricing":
-        setActiveItem(3);
         break;
       default:
         setActiveItem(0);
@@ -43,18 +43,13 @@ const Navbar = props => {
               <Item textColor={textColor}>Use Cases</Item>
             </MenuItem>
           </NavLink>
-          <NavLink to="/features">
+          <NavLink to="/documentation">
             <MenuItem as={isActive(2)} onClick={() => activateItem(2)}>
-              <Item textColor={textColor}>Features</Item>
-            </MenuItem>
-          </NavLink>
-          <NavLink to="/docs">
-            <MenuItem as={isActive(3)} onClick={() => activateItem(3)}>
               <Item textColor={textColor}>Docs</Item>
             </MenuItem>
           </NavLink>
           <NavLink to="/contact">
-            <MenuItem as={isActive(4)} onClick={() => activateItem(4)}>
+            <MenuItem as={isActive(3)} onClick={() => activateItem(3)}>
               <Item textColor={textColor}>Contact</Item>
             </MenuItem>
           </NavLink>
@@ -206,7 +201,7 @@ const MenuItem = styled.div`
 const ActiveMenuItem = styled.div`
   float: left;
   font-size: 1.25rem;
-  border-bottom: ${GlobalColors.PrimaryGreen};
+  border-bottom: ${GlobalColors.SecondaryGreen};
   border-bottom-width: thin;
   border-bottom-style: solid;
 `;

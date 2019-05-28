@@ -10,11 +10,8 @@ const Intro = () => {
       <Container>
         <LeftTextContainer>
           <InnerTextContainer>
-            <PrimaryText>The Code Learning Project</PrimaryText>
-            <SecondaryText>
-              Open-source learning management system designed for coding
-              bootcamps.
-            </SecondaryText>
+            <PrimaryText>Open-Source Learning Management Framework</PrimaryText>
+            <SecondaryText>Designed for coding bootcamps.</SecondaryText>
             <SecondaryText>
               Built & maintained by teachers & students.
             </SecondaryText>
@@ -120,6 +117,7 @@ const PrimaryText = styled.h1`
   color: white !important;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid ${GlobalColors.PrimaryWhite};
+  font-size: 3.5rem !important;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     text-align: center;

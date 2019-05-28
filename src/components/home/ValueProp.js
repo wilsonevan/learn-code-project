@@ -16,11 +16,10 @@ const ValueProp = () => {
               <FeatureIcon>
                 <Icon size="huge" name="code" />
               </FeatureIcon>
-              <FeatureHeader>Code Text Editor</FeatureHeader>
+              <FeatureHeader>Collaborative</FeatureHeader>
               <FeatureText>
-                Integrated text editor with syntax recommendations used for
-                easily typing and grading code for quiz questions and
-                assignments.
+                A free, collaborative project for all developers, especially
+                junior developers.
               </FeatureText>
             </FeatureContainer>
 
@@ -28,11 +27,12 @@ const ValueProp = () => {
               <FeatureIcon>
                 <Icon size="huge" name="assistive listening systems" />
               </FeatureIcon>
-              <FeatureHeader>Student Help Portal</FeatureHeader>
+              <FeatureHeader>High Value</FeatureHeader>
               <FeatureText>
-                Integrated text editor with syntax recommendations used for
-                easily typing and grading code for quiz questions and
-                assignments.
+                Create your own LMS instance and host it yourself, and customize
+                it specifically for your bootcamp. Our large code base allows
+                developers to easily pick and choose the features they want to
+                enable.
               </FeatureText>
             </FeatureContainer>
 
@@ -40,11 +40,12 @@ const ValueProp = () => {
               <FeatureIcon>
                 <Icon size="huge" name="chart area" />
               </FeatureIcon>
-              <FeatureHeader>Grading Trends & Analytics</FeatureHeader>
+              <FeatureHeader>Scalable</FeatureHeader>
               <FeatureText>
-                Integrated text editor with syntax recommendations used for
-                easily typing and grading code for quiz questions and
-                assignments.
+                Spree is cloud-ready, so lets you be cost-efficient on slow
+                days, yet handles busy days or rapid growth with ease. With the
+                right architecture and infrastructure Spree fits unlimited SKUs
+                or orders and scales up to millions of users per day.
               </FeatureText>
             </FeatureContainer>
 
@@ -52,14 +53,12 @@ const ValueProp = () => {
               <FeatureIcon>
                 <Icon size="huge" name="code branch" />
               </FeatureIcon>
-              <FeatureHeader>Easy-to-Use Attendance</FeatureHeader>
+              <FeatureHeader>Simple Setup</FeatureHeader>
               <FeatureText>
-                Integrated text editor with syntax recommendations used for
-                easily typing and grading code for quiz questions and
-                assignments.
+                Download and install it on your own, or let us build and set it
+                up for you!
               </FeatureText>
             </FeatureContainer>
-
           </InnerContainer>
         </OuterContainer>
       </PageContainer>

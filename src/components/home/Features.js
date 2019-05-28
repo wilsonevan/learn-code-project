@@ -107,7 +107,7 @@ const Header = styled.h1`
   z-index: 2;
   padding-left: 5rem;
   padding-top: 5rem;
-`;
+`;  
 
 const HeaderImage = styled.img`
   width: 60%;

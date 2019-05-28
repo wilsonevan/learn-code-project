@@ -89,14 +89,17 @@ const Container = styled.div`
   min-height: 70vh;
   width: 100vw;
   padding: 8rem;
+  
 `;
 
-const Header = styled.h1``;
+const Header = styled.h1`
+`;
 
 const Footnote = styled.h2`
   margin: 0.3rem;
   width: 70%;
   text-align: center;
+  
 `
 
 const InnerContainer = styled.div`
@@ -126,14 +129,18 @@ const FeatureContainer = styled.div`
 const FeatureIcon = styled.div``;
 
 const FeatureHeader = styled.h2`
-  margin: 0.5rem;
+  margin: 1rem;
   text-align: center;
+  font-size: 2rem;
   font-weight: 500 !important;
+  /* color: ${GlobalColors.PrimaryGreen}; */
+
 `;
 
 const FeatureText = styled.h2`
   margin: 0.5rem;
   text-align: center;
+  
 `;
 
 export default ValueProp;
