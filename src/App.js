@@ -5,6 +5,8 @@ import Home from "./components/home/Home";
 import NoMatch from "./components/NoMatch";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Mission from "./components/mission/Mission";
+import ContactUs from "./components/contact/ContactUs";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/mission" component={Mission} />
+        <Route exact path="/contact" component={ContactUs} />
         <Route component={NoMatch} />
       </Switch>
       <Footer />
