@@ -2,90 +2,85 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
 import { Icon } from "semantic-ui-react";
+import Image1 from "../../images/adult-blur-business-2102416-gradient.jpg";
 
 const ValueProp = () => {
   return (
     <>
-      <Container>
-        <Header>Improving the Bootcamp Experience</Header>
-        <InnerContainer>
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon size="huge" name="code" />
-            </FeatureIcon>
-            <FeatureHeader>Code Text Editor</FeatureHeader>
-            <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
-            </FeatureText>
-          </FeatureContainer>
+      <PageContainer>
+        <HeaderImage src={Image1} />
+        <OuterContainer>
+          <Header>Improving the Bootcamp Experience</Header>
+          <InnerContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon size="huge" name="code" />
+              </FeatureIcon>
+              <FeatureHeader>Code Text Editor</FeatureHeader>
+              <FeatureText>
+                Integrated text editor with syntax recommendations used for
+                easily typing and grading code for quiz questions and
+                assignments.
+              </FeatureText>
+            </FeatureContainer>
 
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon size="huge" name="assistive listening systems" />
-            </FeatureIcon>
-            <FeatureHeader>Student Help Portal</FeatureHeader>
-            <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
-            </FeatureText>
-          </FeatureContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon size="huge" name="assistive listening systems" />
+              </FeatureIcon>
+              <FeatureHeader>Student Help Portal</FeatureHeader>
+              <FeatureText>
+                Integrated text editor with syntax recommendations used for
+                easily typing and grading code for quiz questions and
+                assignments.
+              </FeatureText>
+            </FeatureContainer>
 
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon size="huge" name="chart area" />
-            </FeatureIcon>
-            <FeatureHeader>Grading Trends & Analytics</FeatureHeader>
-            <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
-            </FeatureText>
-          </FeatureContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon size="huge" name="chart area" />
+              </FeatureIcon>
+              <FeatureHeader>Grading Trends & Analytics</FeatureHeader>
+              <FeatureText>
+                Integrated text editor with syntax recommendations used for
+                easily typing and grading code for quiz questions and
+                assignments.
+              </FeatureText>
+            </FeatureContainer>
 
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon size="huge" name="code branch" />
-            </FeatureIcon>
-            <FeatureHeader>Easy-to-Use Attendance</FeatureHeader>
-            <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
-            </FeatureText>
-          </FeatureContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon size="huge" name="code branch" />
+              </FeatureIcon>
+              <FeatureHeader>Easy-to-Use Attendance</FeatureHeader>
+              <FeatureText>
+                Integrated text editor with syntax recommendations used for
+                easily typing and grading code for quiz questions and
+                assignments.
+              </FeatureText>
+            </FeatureContainer>
 
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon size="huge" name="calendar alternate outline" />
-            </FeatureIcon>
-            <FeatureHeader>Advanced Course Calendar Views</FeatureHeader>
-            <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
-            </FeatureText>
-          </FeatureContainer>
-
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon size="huge" name="laptop" />
-            </FeatureIcon>
-            <FeatureHeader>
-              Direct GitHub Repository Link Submissions
-            </FeatureHeader>
-            <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
-            </FeatureText>
-          </FeatureContainer>
-        </InnerContainer>
-      </Container>
+          </InnerContainer>
+        </OuterContainer>
+      </PageContainer>
     </>
   );
 };
 
-const Container = styled.div`
+const PageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70vh;
+  width: 100vw;
+  margin-bottom: 3rem;
+`;
+
+const OuterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   min-height: 70vh;
   width: 100vw;
@@ -93,7 +88,17 @@ const Container = styled.div`
   padding-right: 5rem;
 `;
 
-const Header = styled.h1``;
+const Header = styled.h1`
+  background-color: ${GlobalColors.PrimaryWhite};
+  z-index: 2;
+  padding-left: 5rem;
+  padding-top: 5rem;
+`;
+
+const HeaderImage = styled.img`
+  width: 30%;
+  /* height: 100vh; */
+`;
 
 const InnerContainer = styled.div`
   display: flex;

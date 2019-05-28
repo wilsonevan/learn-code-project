@@ -8,41 +8,49 @@ const ValueProp = () => {
     <>
       <Container>
         <Header>Join our community!</Header>
+        <Footnote>
+          We are excited to be launching this project as of June 2019!
+        </Footnote>
+        <Footnote>
+          It has been a several month work in progress and is now ready for
+          collaborators
+        </Footnote>
+        <Footnote>
+          All are welcome to work together with us in order to improve the
+          experience for all new members who want to learn to code
+        </Footnote>
         <InnerContainer>
           <FeatureContainer>
             <FeatureIcon>
-              <Icon size="huge" name="code" />
+              <Icon size="huge" name="history" />
             </FeatureIcon>
-            <FeatureHeader>Open-source</FeatureHeader>
-            <FeatureText>
-              The Code Learning Project is open source, so there are no license
-              or transaction costs.
-            </FeatureText>
+            <FeatureHeader>755</FeatureHeader>
+            <FeatureText>Commits</FeatureText>
           </FeatureContainer>
 
           <FeatureContainer>
             <FeatureIcon>
-              <Icon size="huge" name="assistive listening systems" />
+              <Icon size="huge" name="users" />
             </FeatureIcon>
-            <FeatureHeader>Collaboration</FeatureHeader>
-            <FeatureText>
-              Every bootcamp has different needs, but many overlap. Every
-              bootcamp teaches important coding languages, but not all of them.
-              Harness the Collaborative community of all bootcamps working
-              together to build tools that improve quality of education for all.
-            </FeatureText>
+            <FeatureHeader>6</FeatureHeader>
+            <FeatureText>Contributors</FeatureText>
           </FeatureContainer>
 
           <FeatureContainer>
             <FeatureIcon>
-              <Icon size="huge" name="chart area" />
+              <Icon size="huge" name="slack hash" />
             </FeatureIcon>
-            <FeatureHeader>Extensible</FeatureHeader>
+            <FeatureHeader>6</FeatureHeader>
+            <FeatureText>Slack Members</FeatureText>
+          </FeatureContainer>
+
+          {/* <FeatureContainer>
+            <FeatureIcon>
+              <Icon size="huge" name="star outline" />
+            </FeatureIcon>
+            <FeatureHeader>1</FeatureHeader>
             <FeatureText>
-              Do you need to differentiate from competition with a unique
-              functionality reflecting your business model? Or a beautiful
-              storefront? Spree empowers you to do both, because it’s a set of
-              building blocks which developers can move around at will.
+              GitHub Stars
             </FeatureText>
           </FeatureContainer>
 
@@ -50,41 +58,23 @@ const ValueProp = () => {
             <FeatureIcon>
               <Icon size="huge" name="code branch" />
             </FeatureIcon>
-            <FeatureHeader>Scalable</FeatureHeader>
+            <FeatureHeader>1</FeatureHeader>
             <FeatureText>
-              The Code Learning Project is cloud-ready, so lets you scale up as
-              your bootcamp grows. It is also great for online bootcamps or
-              academies as they scale internationally.
+              Forks
             </FeatureText>
           </FeatureContainer>
 
           <FeatureContainer>
             <FeatureIcon>
-              <Icon size="huge" name="calendar alternate outline" />
-            </FeatureIcon>
-            <FeatureHeader>Short time to market</FeatureHeader>
-            <FeatureText>
-              The Code Learning Project is built with Ruby on Rails and Reactjs,
-              and expanding into further platforms for bootcamps which focus on
-              other stacks.
-            </FeatureText>
-          </FeatureContainer>
-
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon size="huge" name="laptop" />
+              <Icon size="huge" name="download" />
             </FeatureIcon>
             <FeatureHeader>
-              Active community and a dedicated core team
+              0
             </FeatureHeader>
             <FeatureText>
-              An active community of developers keeps this project moving
-              forward submitting pull request or issues, but it takes a group of
-              focused developers and testers collaborating closely to release
-              new versions and resolve any ongoing issues. Our core team has
-              your back day-in and day-out!
+              Downloads
             </FeatureText>
-          </FeatureContainer>
+          </FeatureContainer> */}
         </InnerContainer>
       </Container>
     </>
@@ -94,15 +84,20 @@ const ValueProp = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   min-height: 70vh;
   width: 100vw;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding: 8rem;
 `;
 
 const Header = styled.h1``;
+
+const Footnote = styled.h2`
+  margin: 0.3rem;
+  width: 70%;
+  text-align: center;
+`
 
 const InnerContainer = styled.div`
   display: flex;
@@ -133,9 +128,10 @@ const FeatureIcon = styled.div``;
 const FeatureHeader = styled.h2`
   margin: 0.5rem;
   text-align: center;
+  font-weight: 500 !important;
 `;
 
-const FeatureText = styled.h3`
+const FeatureText = styled.h2`
   margin: 0.5rem;
   text-align: center;
 `;

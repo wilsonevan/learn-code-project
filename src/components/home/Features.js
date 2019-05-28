@@ -91,7 +91,7 @@ const Container = styled.div`
   align-items: flex-start;
   min-height: 70vh;
   width: 100vw;
-  margin-bottom: 8rem;
+  margin-bottom: 3rem;
 `;
 
 const HeaderContainer = styled.div`
