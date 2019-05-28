@@ -39,7 +39,7 @@ const Navbar = props => {
     return (
       <>
         <CenterMenu>
-          <NavLink to="/use-cases ">
+          <NavLink to="/use-cases">
             <MenuItem as={isActive(1)} onClick={() => activateItem(1)}>
               <Item textColor={textColor}>Use Cases</Item>
             </MenuItem>

@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Mission from "./components/mission/Mission";
 import ContactUs from "./components/contact/ContactUs";
+import UseCases from "./components/usecases/UseCases";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/mission" component={Mission} />
         <Route exact path="/contact" component={ContactUs} />
+        <Route exact path="/use-cases" component={UseCases} />
         <Route component={NoMatch} />
       </Switch>
       <Footer />
