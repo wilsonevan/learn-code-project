@@ -13,53 +13,51 @@ const ValueProp = () => {
           <Header>Improving the Bootcamp Experience</Header>
           <InnerContainer>
             <FeatureContainer>
-              <FeatureIcon>
+              {/* <FeatureIcon>
                 <Icon size="huge" name="code" />
-              </FeatureIcon>
-              <FeatureHeader>Code Text Editor</FeatureHeader>
+              </FeatureIcon> */}
+              <FeatureHeader>Collaborative</FeatureHeader>
               <FeatureText>
-                Integrated text editor with syntax recommendations used for
-                easily typing and grading code for quiz questions and
-                assignments.
+                A free, collaborative project for all students and developers.
+                Designed to enhance the learning process for those learning code
+                around the world.
               </FeatureText>
             </FeatureContainer>
 
             <FeatureContainer>
-              <FeatureIcon>
+              {/* <FeatureIcon>
                 <Icon size="huge" name="assistive listening systems" />
-              </FeatureIcon>
-              <FeatureHeader>Student Help Portal</FeatureHeader>
+              </FeatureIcon> */}
+              <FeatureHeader>High Value</FeatureHeader>
               <FeatureText>
-                Integrated text editor with syntax recommendations used for
-                easily typing and grading code for quiz questions and
-                assignments.
+                Create your own LMS instance and host it yourself, then
+                customize it specifically for your organization. Our large code
+                base allows developers to easily pick and choose the features
+                they want to enable.
               </FeatureText>
             </FeatureContainer>
 
             <FeatureContainer>
-              <FeatureIcon>
+              {/* <FeatureIcon>
                 <Icon size="huge" name="chart area" />
-              </FeatureIcon>
-              <FeatureHeader>Grading Trends & Analytics</FeatureHeader>
+              </FeatureIcon> */}
+              <FeatureHeader>Scalable</FeatureHeader>
               <FeatureText>
-                Integrated text editor with syntax recommendations used for
-                easily typing and grading code for quiz questions and
-                assignments.
+                Our free framework can be hosted on low-cost servers for those
+                who are starting out, and grow with your organization.
               </FeatureText>
             </FeatureContainer>
 
             <FeatureContainer>
-              <FeatureIcon>
+              {/* <FeatureIcon>
                 <Icon size="huge" name="code branch" />
-              </FeatureIcon>
-              <FeatureHeader>Easy-to-Use Attendance</FeatureHeader>
+              </FeatureIcon> */}
+              <FeatureHeader>Simple Setup</FeatureHeader>
               <FeatureText>
-                Integrated text editor with syntax recommendations used for
-                easily typing and grading code for quiz questions and
-                assignments.
+                Download and install it on your own, or let us build and set it
+                up for you!
               </FeatureText>
             </FeatureContainer>
-
           </InnerContainer>
         </OuterContainer>
       </PageContainer>
@@ -91,8 +89,7 @@ const OuterContainer = styled.div`
 const Header = styled.h1`
   background-color: ${GlobalColors.PrimaryWhite};
   z-index: 2;
-  padding-left: 5rem;
-  padding-top: 5rem;
+  text-align: center;
 `;
 
 const HeaderImage = styled.img`
@@ -110,7 +107,7 @@ const InnerContainer = styled.div`
   padding-bottom: 3rem;
 
   /* height: 100vh; */
-  width: 100%;
+  width: 100%;  
 `;
 
 const FeatureContainer = styled.div`
@@ -118,10 +115,12 @@ const FeatureContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 28%;
+  width: 34%;
   min-width: 20rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  /* flex: 1 0 34%; */
+
 `;
 
 const FeatureIcon = styled.div``;
@@ -129,6 +128,7 @@ const FeatureIcon = styled.div``;
 const FeatureHeader = styled.h2`
   margin: 0.5rem;
   text-align: center;
+  font-weight: 600 !important;
 `;
 
 const FeatureText = styled.h3`
