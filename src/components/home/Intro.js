@@ -78,7 +78,7 @@ const InnerTextContainer = styled.div`
   background-color: ${GlobalColors.SecondaryGreen};
   padding: 3rem;
   border-radius: 10px;
-  border: 1px solid white;
+  border: 3px solid white;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     text-align: center;
@@ -90,7 +90,7 @@ const InnerTextContainer = styled.div`
 const RightTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   margin-right: 5%;
   padding: 20px;
 
@@ -114,8 +114,10 @@ const PrimaryText = styled.h1`
 `;
 
 const LinkText = styled.h2`
-  text-align: center;
+  text-align: left;
   font-size: 2.5rem !important;
+  padding: 0.6rem;
+  font-weight: 500 !important;
 `;
 
 const SecondaryText = styled.h2`

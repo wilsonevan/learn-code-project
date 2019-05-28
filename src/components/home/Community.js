@@ -3,20 +3,20 @@ import styled from "styled-components";
 import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
 import { Icon } from "semantic-ui-react";
 
-const Features = () => {
+const ValueProp = () => {
   return (
     <>
       <Container>
-        <Header>Key Features</Header>
+        <Header>Join our community!</Header>
         <InnerContainer>
           <FeatureContainer>
             <FeatureIcon>
               <Icon size="huge" name="code" />
             </FeatureIcon>
-            <FeatureHeader>Code Text Editor</FeatureHeader>
+            <FeatureHeader>Open-source</FeatureHeader>
             <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
+              The Code Learning Project is open source, so there are no license
+              or transaction costs.
             </FeatureText>
           </FeatureContainer>
 
@@ -24,10 +24,12 @@ const Features = () => {
             <FeatureIcon>
               <Icon size="huge" name="assistive listening systems" />
             </FeatureIcon>
-            <FeatureHeader>Student Help Portal</FeatureHeader>
+            <FeatureHeader>Collaboration</FeatureHeader>
             <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
+              Every bootcamp has different needs, but many overlap. Every
+              bootcamp teaches important coding languages, but not all of them.
+              Harness the Collaborative community of all bootcamps working
+              together to build tools that improve quality of education for all.
             </FeatureText>
           </FeatureContainer>
 
@@ -35,10 +37,12 @@ const Features = () => {
             <FeatureIcon>
               <Icon size="huge" name="chart area" />
             </FeatureIcon>
-            <FeatureHeader>Grading Trends & Analytics</FeatureHeader>
+            <FeatureHeader>Extensible</FeatureHeader>
             <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
+              Do you need to differentiate from competition with a unique
+              functionality reflecting your business model? Or a beautiful
+              storefront? Spree empowers you to do both, because it’s a set of
+              building blocks which developers can move around at will.
             </FeatureText>
           </FeatureContainer>
 
@@ -46,10 +50,11 @@ const Features = () => {
             <FeatureIcon>
               <Icon size="huge" name="code branch" />
             </FeatureIcon>
-            <FeatureHeader>Easy-to-Use Attendance</FeatureHeader>
+            <FeatureHeader>Scalable</FeatureHeader>
             <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
+              The Code Learning Project is cloud-ready, so lets you scale up as
+              your bootcamp grows. It is also great for online bootcamps or
+              academies as they scale internationally.
             </FeatureText>
           </FeatureContainer>
 
@@ -57,10 +62,11 @@ const Features = () => {
             <FeatureIcon>
               <Icon size="huge" name="calendar alternate outline" />
             </FeatureIcon>
-            <FeatureHeader>Advanced Course Calendar Views</FeatureHeader>
+            <FeatureHeader>Short time to market</FeatureHeader>
             <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
+              The Code Learning Project is built with Ruby on Rails and Reactjs,
+              and expanding into further platforms for bootcamps which focus on
+              other stacks.
             </FeatureText>
           </FeatureContainer>
 
@@ -69,11 +75,14 @@ const Features = () => {
               <Icon size="huge" name="laptop" />
             </FeatureIcon>
             <FeatureHeader>
-              Direct GitHub Repo Submissions
+              Active community and a dedicated core team
             </FeatureHeader>
             <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
+              An active community of developers keeps this project moving
+              forward submitting pull request or issues, but it takes a group of
+              focused developers and testers collaborating closely to release
+              new versions and resolve any ongoing issues. Our core team has
+              your back day-in and day-out!
             </FeatureText>
           </FeatureContainer>
         </InnerContainer>
@@ -91,7 +100,6 @@ const Container = styled.div`
   width: 100vw;
   padding-left: 5rem;
   padding-right: 5rem;
-  margin-bottom: 8rem;
 `;
 
 const Header = styled.h1``;
@@ -125,7 +133,6 @@ const FeatureIcon = styled.div``;
 const FeatureHeader = styled.h2`
   margin: 0.5rem;
   text-align: center;
-  font-weight: 500 !important;
 `;
 
 const FeatureText = styled.h3`
@@ -133,4 +140,4 @@ const FeatureText = styled.h3`
   text-align: center;
 `;
 
-export default Features;
+export default ValueProp;

@@ -6,6 +6,7 @@ import { Loader } from "semantic-ui-react";
 import Intro from "./Intro";
 import Features from "./Features";
 import ValueProps from './ValueProp'
+import Community from './Community'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Intro />
         <Features />
         <ValueProps />
+        <Community />
       </PageContainer>
     </>
   );
