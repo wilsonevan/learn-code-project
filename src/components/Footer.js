@@ -5,6 +5,7 @@ import {
   List,
 } from 'semantic-ui-react';
 import styled from 'styled-components';
+import {GlobalColors, GlobalSizes} from '../styles/GlobalStyles'
 
 const Footer = () => (
   <FooterContainer>
@@ -42,7 +43,7 @@ const Footer = () => (
 )
 
 const FooterContainer = styled.div`
-  background-color: black;
+  background-color: ${GlobalColors.PrimaryGrey};
   padding: 5rem;
   display: flex;
   justify-content: center;

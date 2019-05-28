@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { AuthConsumer } from "../../providers/AuthProvider";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import logo from "../../images/logo.svg";
 // import "./HomeNav.css";
-import { Dropdown } from "semantic-ui-react";
-import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
+import { Dropdown, Icon } from "semantic-ui-react";
+import { GlobalColors, GlobalSizes } from "../styles/GlobalStyles";
 
 const Navbar = props => {
   const [activeItem, setActiveItem] = useState(0);
@@ -40,9 +38,9 @@ const Navbar = props => {
     return (
       <>
         <CenterMenu>
-          <NavLink to="/">
+          <NavLink to="/use-cases ">
             <MenuItem as={isActive(1)} onClick={() => activateItem(1)}>
-              <Item textColor={textColor}>Home</Item>
+              <Item textColor={textColor}>Use Cases</Item>
             </MenuItem>
           </NavLink>
           <NavLink to="/features">
@@ -50,9 +48,14 @@ const Navbar = props => {
               <Item textColor={textColor}>Features</Item>
             </MenuItem>
           </NavLink>
-          <NavLink to="/pricing">
+          <NavLink to="/docs">
             <MenuItem as={isActive(3)} onClick={() => activateItem(3)}>
-              <Item textColor={textColor}>Pricing</Item>
+              <Item textColor={textColor}>Docs</Item>
+            </MenuItem>
+          </NavLink>
+          <NavLink to="/contact">
+            <MenuItem as={isActive(4)} onClick={() => activateItem(4)}>
+              <Item textColor={textColor}>Contact</Item>
             </MenuItem>
           </NavLink>
         </CenterMenu>
@@ -60,50 +63,25 @@ const Navbar = props => {
     );
   };
 
-  const rightNavItems = textColor => {
-    const {
-      auth: { user, handleLogout },
-      history
-    } = props;
-
-    if (user) {
-      return (
-        <>
-          <RightMenu>
-            <NavLink to="/dashboard" onClick={() => activateItem(1)}>
-              <MenuItem as={isActive(1)}>
-                <Item textColor={textColor}>
-                  {user.admin ? "Admin Dashboard" : "Dashboard"}
-                </Item>
-              </MenuItem>
-            </NavLink>
-            <NavLink to="/login" onClick={() => handleLogout(history)}>
-              <MenuItem>
-                <Item textColor={textColor}>Logout</Item>
-              </MenuItem>
-            </NavLink>
-          </RightMenu>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <RightMenu>
-            <NavLink to="/login" onClick={() => activateItem(4)}>
-              <MenuItem as={isActive(4)}>
-                <Item textColor={textColor}>Login</Item>
-              </MenuItem>
-            </NavLink>
-            <NavLink to="/register" onClick={() => activateItem(5)}>
-              <MenuItem as={isActive(5)}>
-                <Item textColor={textColor}>Register</Item>
-              </MenuItem>
-            </NavLink>
-          </RightMenu>
-        </>
-      );
-    }
-  };
+  // const rightNavItems = textColor => {
+  //   return (
+  //     <>
+  //       <RightMenu>
+  //         <NavLink to="/dashboard" onClick={() => activateItem(1)}>
+  //           <MenuItem as={isActive(1)}>
+  //             <Item textColor={textColor}>
+  //             </Item>
+  //           </MenuItem>
+  //         </NavLink>
+  //         <NavLink to="/login">
+  //           <MenuItem>
+  //             <Item textColor={textColor}>Logout</Item>
+  //           </MenuItem>
+  //         </NavLink>
+  //       </RightMenu>
+  //     </>
+  //   );
+  // };
 
   const compactNavMenu = () => {
     return (
@@ -178,13 +156,18 @@ const Navbar = props => {
 
   return (
     <NavContainer>
+      <NavLink to="/">
+        <LogoContainer>
+          <Logo>
+            <Icon size="big" name="code branch" />
+          </Logo>
+          <CompanyName>The Code Learning Project</CompanyName>
+        </LogoContainer>
+      </NavLink>
       <NavMenu>
-        <MenuItem>
-          <Logo src={logo} alt="logo" className="App-logo" />
-        </MenuItem>
         {compactNavMenu()}
         {centerNavItems(props.textColor)}
-        {rightNavItems(props.textColor)}
+        {/* {rightNavItems(props.textColor)} */}
       </NavMenu>
     </NavContainer>
   );
@@ -201,7 +184,7 @@ const NavMenu = styled.div`
   margin-left: 6rem;
   background-color: rgba(0, 0, 0, 0);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 const CompactNavContainer = styled.div`
@@ -230,11 +213,12 @@ const ActiveMenuItem = styled.div`
 
 const Item = styled.p`
   display: block;
-  color: ${props => props.textColor || GlobalColors.PrimaryWhite};
+  color: ${props => props.textColor || GlobalColors.PrimaryGrey};
   text-align: center;
   padding: 10px 16px 5px 16px;
   text-decoration: none;
   z-index: 1;
+  letter-spacing: 1px !important;
 `;
 
 const SupportLink = styled.a`
@@ -243,20 +227,25 @@ const SupportLink = styled.a`
   }
 `;
 
-const Logo = styled.img`
+const LogoContainer = styled.div`
   position: absolute;
   top: 1.5rem;
   left: 2rem;
-  height: 4rem;
-  width: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 `;
 
-const CompanyName = styled.div`
-  padding-left: 1rem;
-  padding-top: 0.3rem;
-  color: #f2f2f2 !important;
-  font-size: 1.8rem !important;
+const Logo = styled.div`
+  /* height: 4rem;
+  width: 4rem; */
+`;
+
+const CompanyName = styled.h1`
+  font-size: 1.6rem !important;
   border: none;
+  margin: 0;
+  letter-spacing: 0.5px !important;
 `;
 
 const RightMenu = styled.div`
@@ -272,22 +261,27 @@ const RightMenu = styled.div`
   }
 `;
 
+// const CenterContainer = styled.div`
+//   position: absolute;
+//   top: 1.5rem;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// `;
+
 const CenterMenu = styled.div`
-  position: relative;
   text-align: center;
   border-bottom: 5px !important;
   display: flex;
   justify-content: center;
-  padding: 2rem 2rem 1rem 2rem;
-  padding-left: 15%;
+  padding-top: 1.5rem;
+  /* padding: 2rem 2rem 1rem 2rem; */
+  /* padding-left: 15%; */
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     display: none;
   }
 `;
 
-const ConnectedNavbar = props => (
-  <AuthConsumer>{value => <Navbar {...props} auth={value} />}</AuthConsumer>
-);
-
-export default ConnectedNavbar;
+export default Navbar;
