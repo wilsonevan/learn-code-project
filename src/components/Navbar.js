@@ -4,6 +4,7 @@ import styled from "styled-components";
 // import "./HomeNav.css";
 import { Dropdown, Icon } from "semantic-ui-react";
 import { GlobalColors, GlobalSizes } from "../styles/GlobalStyles";
+import Logo from '../images/logo_transparent_updated.png'
 
 const Navbar = props => {
   const [activeItem, setActiveItem] = useState(0);
@@ -158,9 +159,7 @@ const Navbar = props => {
     <NavContainer>
       <NavLink to="/">
         <LogoContainer onClick={() => activateItem(0)}>
-          <Logo>
-            <Icon size="big" name="code branch" />
-          </Logo>
+          <MyLogo src={Logo} />
           <CompanyName>The Code Learning Project</CompanyName>
         </LogoContainer>
       </NavLink>
@@ -236,15 +235,16 @@ const LogoContainer = styled.div`
   align-items: center;
 `;
 
-const Logo = styled.div`
-  /* height: 4rem;
-  width: 4rem; */
+const MyLogo = styled.img`
+  height: 4rem;
+  width: 4rem;
 `;
 
 const CompanyName = styled.h1`
   font-size: 1.6rem !important;
   border: none;
   margin: 0;
+  padding-left: 1rem;
   letter-spacing: 0.5px !important;
 `;
 

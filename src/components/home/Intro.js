@@ -101,7 +101,7 @@ const RightTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 5%;
+  /* margin-right: 5%; */
   padding: 20px;
 
   @media (max-width: 925px) {
