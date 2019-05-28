@@ -48,8 +48,13 @@ const Navbar = props => {
               <Item textColor={textColor}>Docs</Item>
             </MenuItem>
           </NavLink>
-          <NavLink to="/contact">
+          <NavLink to="/mission">
             <MenuItem as={isActive(3)} onClick={() => activateItem(3)}>
+              <Item textColor={textColor}>Our Mission</Item>
+            </MenuItem>
+          </NavLink>
+          <NavLink to="/contact">
+            <MenuItem as={isActive(4)} onClick={() => activateItem(4)}>
               <Item textColor={textColor}>Contact</Item>
             </MenuItem>
           </NavLink>
