@@ -13,46 +13,45 @@ const ValueProp = () => {
           <Header>Improving the Bootcamp Experience</Header>
           <InnerContainer>
             <FeatureContainer>
-              <FeatureIcon>
+              {/* <FeatureIcon>
                 <Icon size="huge" name="code" />
-              </FeatureIcon>
+              </FeatureIcon> */}
               <FeatureHeader>Collaborative</FeatureHeader>
               <FeatureText>
-                A free, collaborative project for all developers, especially
-                junior developers.
+                A free, collaborative project for all students and developers.
+                Designed to enhance the learning process for those learning code
+                around the world.
               </FeatureText>
             </FeatureContainer>
 
             <FeatureContainer>
-              <FeatureIcon>
+              {/* <FeatureIcon>
                 <Icon size="huge" name="assistive listening systems" />
-              </FeatureIcon>
+              </FeatureIcon> */}
               <FeatureHeader>High Value</FeatureHeader>
               <FeatureText>
-                Create your own LMS instance and host it yourself, and customize
-                it specifically for your bootcamp. Our large code base allows
-                developers to easily pick and choose the features they want to
-                enable.
+                Create your own LMS instance and host it yourself, then
+                customize it specifically for your organization. Our large code
+                base allows developers to easily pick and choose the features
+                they want to enable.
               </FeatureText>
             </FeatureContainer>
 
             <FeatureContainer>
-              <FeatureIcon>
+              {/* <FeatureIcon>
                 <Icon size="huge" name="chart area" />
-              </FeatureIcon>
+              </FeatureIcon> */}
               <FeatureHeader>Scalable</FeatureHeader>
               <FeatureText>
-                Spree is cloud-ready, so lets you be cost-efficient on slow
-                days, yet handles busy days or rapid growth with ease. With the
-                right architecture and infrastructure Spree fits unlimited SKUs
-                or orders and scales up to millions of users per day.
+                Our free framework can be hosted on low-cost servers for those
+                who are starting out, and grow with your organization.
               </FeatureText>
             </FeatureContainer>
 
             <FeatureContainer>
-              <FeatureIcon>
+              {/* <FeatureIcon>
                 <Icon size="huge" name="code branch" />
-              </FeatureIcon>
+              </FeatureIcon> */}
               <FeatureHeader>Simple Setup</FeatureHeader>
               <FeatureText>
                 Download and install it on your own, or let us build and set it
@@ -90,8 +89,7 @@ const OuterContainer = styled.div`
 const Header = styled.h1`
   background-color: ${GlobalColors.PrimaryWhite};
   z-index: 2;
-  padding-left: 5rem;
-  padding-top: 5rem;
+  text-align: center;
 `;
 
 const HeaderImage = styled.img`
@@ -109,7 +107,7 @@ const InnerContainer = styled.div`
   padding-bottom: 3rem;
 
   /* height: 100vh; */
-  width: 100%;
+  width: 100%;  
 `;
 
 const FeatureContainer = styled.div`
@@ -117,10 +115,12 @@ const FeatureContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 28%;
+  width: 34%;
   min-width: 20rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  /* flex: 1 0 34%; */
+
 `;
 
 const FeatureIcon = styled.div``;
@@ -128,6 +128,7 @@ const FeatureIcon = styled.div``;
 const FeatureHeader = styled.h2`
   margin: 0.5rem;
   text-align: center;
+  font-weight: 600 !important;
 `;
 
 const FeatureText = styled.h3`

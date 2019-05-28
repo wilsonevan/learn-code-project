@@ -152,7 +152,7 @@ const Navbar = props => {
   return (
     <NavContainer>
       <NavLink to="/">
-        <LogoContainer>
+        <LogoContainer onClick={() => activateItem(0)}>
           <Logo>
             <Icon size="big" name="code branch" />
           </Logo>

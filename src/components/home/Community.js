@@ -7,7 +7,7 @@ const ValueProp = () => {
   return (
     <>
       <Container>
-        <Header>Join our community!</Header>
+        <Header>Join Our Community!</Header>
         <Footnote>
           We are excited to be launching this project as of June 2019!
         </Footnote>
