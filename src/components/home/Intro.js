@@ -85,7 +85,7 @@ const InnerTextContainer = styled.div`
   color: white;
   width: auto;
   /* background-color: rgba(18, 153, 255, 0.4); */
-  background-color: ${GlobalColors.SecondaryGreen};
+  background-color: ${GlobalColors.PrimaryGreen};
   padding: 3rem;
   border-radius: 10px;
   border: 3px solid white;
@@ -114,7 +114,7 @@ const RightTextContainer = styled.div`
 `;
 
 const PrimaryText = styled.h1`
-  color: white !important;
+  color: ${GlobalColors.PrimaryWhite} !important;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid ${GlobalColors.PrimaryWhite};
   font-size: 3.5rem !important;
@@ -140,7 +140,7 @@ const LinkText = styled.h2`
 `;
 
 const SecondaryText = styled.h2`
-  color: white !important;
+  color: ${GlobalColors.PrimaryWhite} !important;
   margin: 0;
   margin-bottom: 0.25rem;
   font-weight: 500 !important;

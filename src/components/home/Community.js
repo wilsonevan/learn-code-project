@@ -12,8 +12,8 @@ const ValueProp = () => {
           We are excited to be launching this project as of June 2019!
         </Footnote>
         <Footnote>
-          It has been a several month work in progress and is now ready for
-          collaborators
+          It has been a work in progress for several months now and is now ready for
+          collaborators to join in.
         </Footnote>
         <Footnote>
           All are welcome to work together with us in order to improve the

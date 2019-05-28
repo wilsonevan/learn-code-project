@@ -201,7 +201,7 @@ const MenuItem = styled.div`
 const ActiveMenuItem = styled.div`
   float: left;
   font-size: 1.25rem;
-  border-bottom: ${GlobalColors.SecondaryGreen};
+  border-bottom: ${GlobalColors.PrimaryGreen};
   border-bottom-width: thin;
   border-bottom-style: solid;
 `;
