@@ -148,6 +148,8 @@ const HeaderContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding-bottom: 0.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid ${GlobalColors.SecondaryGreen};
   }
 `;
 
@@ -160,6 +162,7 @@ const Header = styled.h1`
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     padding: 0;
     text-align: center;
+    font-size: 2.5rem !important;
   }
 `;
 
@@ -197,7 +200,9 @@ const InnerContainer = styled.div`
   width: 100%;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
-    padding: 1.5rem;
+    padding: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 `;
 
