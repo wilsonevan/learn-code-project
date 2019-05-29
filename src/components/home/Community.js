@@ -8,7 +8,7 @@ const ValueProp = () => {
     <>
       <Container>
         <Header>Join Our Community!</Header>
-        <Footnote>
+        <Footnote weight={"bold"}>
           We are excited to be launching this project as of June 2019!
         </Footnote>
         <Footnote>
@@ -17,7 +17,7 @@ const ValueProp = () => {
         </Footnote>
         <Footnote>
           All are welcome to work together with us in order to improve the
-          experience for all new members who want to learn to code
+          experience for all new members who want to learn to code.
         </Footnote>
         <InnerContainer>
           <FeatureContainer>
@@ -118,6 +118,7 @@ const Footnote = styled.h2`
   margin: 0.3rem;
   width: 70%;
   text-align: center;
+  font-weight: ${props => props.weight} !important;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     font-size: 1.5rem;
