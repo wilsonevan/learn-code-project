@@ -44,7 +44,7 @@ const Navbar = props => {
               <Item textColor={textColor}>Use Cases</Item>
             </MenuItem>
           </NavLink>
-          <NavLink to="/documentation">
+          <NavLink to="/docs">
             <MenuItem as={isActive(2)} onClick={() => activateItem(2)}>
               <Item textColor={textColor}>Docs</Item>
             </MenuItem>
@@ -108,7 +108,7 @@ const Navbar = props => {
                 </NavLink>
               </Dropdown.Item>
               <Dropdown.Item>
-                <NavLink to="/documentation">
+                <NavLink to="/docs">
                   <Item textColor={GlobalColors.PrimaryGrey}>Docs</Item>
                 </NavLink>
               </Dropdown.Item>
