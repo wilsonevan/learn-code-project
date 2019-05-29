@@ -154,7 +154,6 @@ const HeaderContainer = styled.div`
 `;
 
 const Header = styled.h1`
-  background-color: ${GlobalColors.PrimaryWhite};
   z-index: 2;
   padding-left: 5rem;
   padding-top: 5rem;

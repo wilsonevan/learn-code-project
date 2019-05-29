@@ -139,6 +139,7 @@ const FeatureHeader = styled.h2`
 const Logo = styled.img`
   height: ${props => props.height || "8rem"};
   margin-bottom: ${props => props.bottom || 0};
+  opacity: 0.8;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     height: 4rem;
