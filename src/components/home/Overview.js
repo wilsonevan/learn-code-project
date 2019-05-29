@@ -23,7 +23,7 @@ const Overview = () => {
           </FeatureContainer>
           <FeatureContainer>
             <Header>
-              Building positive flows to help coders learn more effectively
+              Building positive flows to help developers learn more effectively
             </Header>
             <Link to="use-cases">
               <Button>
@@ -64,6 +64,7 @@ const Header = styled.h1`
   text-align: center;
   margin: 0;
   font-size: 2.5rem !important;
+  width: 80%;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     font-size: 1.5rem !important;
