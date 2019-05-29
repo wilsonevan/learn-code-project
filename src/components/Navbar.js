@@ -261,23 +261,12 @@ const RightMenu = styled.div`
   }
 `;
 
-// const CenterContainer = styled.div`
-//   position: absolute;
-//   top: 1.5rem;
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// `;
-
 const CenterMenu = styled.div`
   text-align: center;
   border-bottom: 5px !important;
   display: flex;
   justify-content: center;
-  padding-top: 1.5rem;
-  /* padding: 2rem 2rem 1rem 2rem; */
-  /* padding-left: 15%; */
+  padding-top: 2rem;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     display: none;
