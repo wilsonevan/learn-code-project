@@ -16,7 +16,7 @@ const GlobalColors = {
 };
 
 const GlobalSizes = {
-  ScreenWidth: "800px"
+  ScreenWidth: "1000px"
 };
 
 const GlobalStyles = createGlobalStyle`
