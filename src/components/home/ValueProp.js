@@ -87,7 +87,7 @@ const OuterContainer = styled.div`
 `;
 
 const Header = styled.h1`
-  background-color: ${GlobalColors.PrimaryWhite};
+  /* background-color: ${GlobalColors.PrimaryWhite}; */
   z-index: 2;
   text-align: center;
 
