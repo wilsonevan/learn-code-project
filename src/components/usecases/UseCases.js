@@ -55,32 +55,61 @@ const UseCases = () => {
 };
 
 const PageContainer = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
+  align-items: center; */
+  min-height: 120vh;
   width: 100vw;
   /* margin-bottom: 3rem; */
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    height: 130vh;
+    /* background-image: url(${Image1});
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    z-index: -10; */
+  }
 `;
 
 const OuterContainer = styled.div`
+  position: absolute;
+  z-index: 10;
+  top: 18%;
+  left: 0;
+  width: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  min-height: 70vh;
-  width: 100vw;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  margin-top: 8rem;
-  margin-right: 30%;
+  min-height: 80vh;
+  /* width: 100vw; */
+  /* padding-left: 5rem; */
+  /* padding-right: 5rem; */
+  /* margin-top: 8rem; */
+  /* margin-right: 30%; */
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    width: 100%;
+    margin: 0;
+  }
 `;
 
 const Header = styled.h1`
   /* background-color: ${GlobalColors.PrimaryWhite}; */
-  z-index: 2;
+  z-index: -2;
   text-align: center;
+  margin: 0;
+  font-size: 3rem !important;
+
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    text-align: center;
+    font-size: 2.5rem !important;
+    width: 80%;
+    margin: 0;
+  }
 `;
 
 const HeaderImage = styled.img`
@@ -89,7 +118,11 @@ const HeaderImage = styled.img`
   top: 0;
   z-index: -10;
   /* width: 40%; */
-  height: 100vh;
+  height: 140vh;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    opacity: 0.2;
+  }
 `;
 
 const InnerContainer = styled.div`
@@ -98,11 +131,16 @@ const InnerContainer = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: flex-start;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
   padding-bottom: 3rem;
+  z-index: 10;
 
-  /* height: 100vh; */
-  width: 100%;
+  min-height: 70vh;
+  width: 80%;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    padding: 0;
+  }
 `;
 
 const FeatureContainer = styled.div`
@@ -114,7 +152,10 @@ const FeatureContainer = styled.div`
   min-width: 20rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  /* flex: 1 0 34%; */
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    width: 33%;
+  }
 `;
 
 const FeatureIcon = styled.div``;
@@ -122,11 +163,23 @@ const FeatureIcon = styled.div``;
 const FeatureHeader = styled.h2`
   margin: 0.5rem;
   text-align: center;
-  font-weight: 600 !important;
+  font-weight: 900 !important;
+  font-size: 1.5rem !important;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    text-align: center;
+    font-size: 1.2rem !important;
+    width: 80%;
+  }
 `;
 
 const FeatureText = styled.h3`
   margin: 0.5rem;
   text-align: center;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    font-size: 1rem;
+    font-weight: 600 !important;
+  }
 `;
 export default UseCases;

@@ -50,6 +50,10 @@ const PageContainer = styled.div`
   width: 100vw;
   margin-top: 7rem;
   margin-bottom: 3rem;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    margin-bottom: 0rem;
+  }
 `;
 
 const Header = styled.h1`
@@ -57,6 +61,10 @@ const Header = styled.h1`
   z-index: 2;
   text-align: center;
   margin: 0;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    font-size: 2.5rem !important;
+  }
 `;
 
 const BGImage = styled.div`
@@ -73,6 +81,10 @@ const BGImage = styled.div`
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   /* height: 100vh; */
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    opacity: 0.3;
+  }
 `;
 
 const InnerContainer = styled.div`
@@ -86,11 +98,20 @@ const InnerContainer = styled.div`
 
   /* height: 100vh; */
   width: 60%;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    width: 80%;
+  }
 `;
 
 const FeatureText = styled.h3`
   margin: 0.5rem;
   text-align: center;
   font-weight: 500 !important;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    font-weight: 600 !important;
+    font-size: 1rem;
+  }
 `;
 export default Mission;

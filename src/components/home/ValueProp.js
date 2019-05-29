@@ -72,7 +72,7 @@ const PageContainer = styled.div`
   align-items: center;
   min-height: 70vh;
   width: 100vw;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 `;
 
 const OuterContainer = styled.div`
@@ -90,11 +90,23 @@ const Header = styled.h1`
   background-color: ${GlobalColors.PrimaryWhite};
   z-index: 2;
   text-align: center;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    padding: 0;
+    text-align: center;
+    font-size: 2.5rem !important;
+    padding-top: 1.5rem;
+    border-top: 1px solid ${GlobalColors.SecondaryGreen};
+  }
 `;
 
 const HeaderImage = styled.img`
   width: 30%;
   /* height: 100vh; */
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    display: none;
+  }
 `;
 
 const InnerContainer = styled.div`
@@ -129,11 +141,19 @@ const FeatureHeader = styled.h2`
   margin: 0.5rem;
   text-align: center;
   font-weight: 600 !important;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    font-size: 1.5rem;
+  }
 `;
 
 const FeatureText = styled.h3`
   margin: 0.5rem;
   text-align: center;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    font-size: 1rem;
+  }
 `;
 
 export default ValueProp;

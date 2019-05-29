@@ -15,7 +15,13 @@ const Features = () => {
         <InnerContainer>
           <FeatureContainer>
             <FeatureIcon>
-              <Icon size="huge" name="code" />
+              <Icon
+                size={
+                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
+                }
+                name="code"
+              />
+              {/* <SmallIcon size="huge" name="code" /> */}
             </FeatureIcon>
             <FeatureHeader>Code Text Editor</FeatureHeader>
             <FeatureText>
@@ -26,7 +32,13 @@ const Features = () => {
 
           <FeatureContainer>
             <FeatureIcon>
-              <Icon size="huge" name="help" />
+              <Icon
+                size={
+                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
+                }
+                name="help"
+              />
+              {/* <SmallIcon size="huge" name="help" /> */}
             </FeatureIcon>
             <FeatureHeader>Student Help Portal</FeatureHeader>
             <FeatureText>
@@ -37,7 +49,13 @@ const Features = () => {
 
           <FeatureContainer>
             <FeatureIcon>
-              <Icon size="huge" name="chart area" />
+              <Icon
+                size={
+                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
+                }
+                name="chart area"
+              />
+              {/* <SmallIcon size="huge" name="chart area" /> */}
             </FeatureIcon>
             <FeatureHeader>Grading Trends & Analytics</FeatureHeader>
             <FeatureText>
@@ -48,7 +66,13 @@ const Features = () => {
 
           <FeatureContainer>
             <FeatureIcon>
-              <Icon size="huge" name="code branch" />
+              <Icon
+                size={
+                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
+                }
+                name="code branch"
+              />
+              {/* <SmallIcon size="huge" name="code branch" /> */}
             </FeatureIcon>
             <FeatureHeader>Easy-to-Use Attendance</FeatureHeader>
             <FeatureText>
@@ -59,7 +83,13 @@ const Features = () => {
 
           <FeatureContainer>
             <FeatureIcon>
-              <Icon size="huge" name="calendar alternate outline" />
+              <Icon
+                size={
+                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
+                }
+                name="calendar alternate outline"
+              />
+              {/* <SmallIcon size="huge" name="calendar alternate outline" /> */}
             </FeatureIcon>
             <FeatureHeader>Advanced Course Calendar Views</FeatureHeader>
             <FeatureText>
@@ -70,7 +100,13 @@ const Features = () => {
 
           <FeatureContainer>
             <FeatureIcon>
-              <Icon size="huge" name="laptop" />
+              <Icon
+                size={
+                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
+                }
+                name="laptop"
+              />
+              {/* <SmallIcon size="huge" name="laptop" /> */}
             </FeatureIcon>
             <FeatureHeader>Direct GitHub Repo Submissions</FeatureHeader>
             <FeatureText>
@@ -92,14 +128,29 @@ const Container = styled.div`
   min-height: 70vh;
   width: 100vw;
   margin-bottom: 3rem;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    padding-top: 1rem;
+    align-items: center;
+
+  }
 `;
 
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  /* flex-wrap: wrap-reverse; */
   align-items: center;
   padding-bottom: 3rem;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid ${GlobalColors.SecondaryGreen};
+  }
 `;
 
 const Header = styled.h1`
@@ -107,7 +158,13 @@ const Header = styled.h1`
   z-index: 2;
   padding-left: 5rem;
   padding-top: 5rem;
-`;  
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    padding: 0;
+    text-align: center;
+    font-size: 2.5rem !important;
+  }
+`;
 
 const HeaderImage = styled.img`
   width: 60%;
@@ -122,6 +179,10 @@ const HeaderImage = styled.img`
     width: 100%;
     content: "";
   } */
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    display: none;
+  }
 `;
 
 const InnerContainer = styled.div`
@@ -137,6 +198,12 @@ const InnerContainer = styled.div`
 
   /* height: 100vh; */
   width: 100%;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    padding: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 `;
 
 const FeatureContainer = styled.div`
@@ -156,11 +223,19 @@ const FeatureHeader = styled.h2`
   margin: 0.5rem;
   text-align: center;
   font-weight: 500 !important;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    font-size: 1.5rem;
+  }
 `;
 
 const FeatureText = styled.h3`
   margin: 0.5rem;
   text-align: center;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    font-size: 1rem;
+  }
 `;
 
 export default Features;
