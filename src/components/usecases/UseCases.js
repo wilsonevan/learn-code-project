@@ -140,9 +140,6 @@ const InnerContainer = styled.div`
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     padding: 0;
-    /* flex-direction: column;
-    justify-content: flex-start;
-    align-items: center; */
   }
 `;
 
@@ -158,11 +155,6 @@ const FeatureContainer = styled.div`
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     width: 33%;
-    /* height: 20rem; */
-    /* border: 3px solid white; */
-    /* background-color: ${GlobalColors.PrimaryGreen}
-    background-color: rgba(255,255,255,0.7);
-    border-radius: 10px; */
   }
 `;
 
@@ -177,7 +169,6 @@ const FeatureHeader = styled.h2`
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     text-align: center;
     font-size: 1.2rem !important;
-    /* color: white !important; */
     width: 80%;
   }
 `;
@@ -188,8 +179,6 @@ const FeatureText = styled.h3`
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     font-size: 1rem;
-    /* width: 60%; */
-    /* color: white !important; */
   }
 `;
 export default UseCases;

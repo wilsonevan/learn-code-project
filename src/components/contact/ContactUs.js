@@ -33,6 +33,13 @@ const PageContainer = styled.div`
   min-height: 70vh;
   width: 100vw;
   margin-bottom: 3rem;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    margin: 0;
+    margin-top: 8rem;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const OuterContainer = styled.div`
@@ -44,12 +51,21 @@ const OuterContainer = styled.div`
   width: 100vw;
   padding-left: 5rem;
   padding-right: 5rem;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    width: 80vw;
+    padding: 0;
+  }
 `;
 
 const Header = styled.h1`
   z-index: 2;
   text-align: center;
   color: white;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    font-size: 2rem !important;
+  }
 `;
 
 const InnerContainer = styled.div`
@@ -69,6 +85,10 @@ const InnerContainer = styled.div`
   padding: 3rem;
   border-radius: 10px;
   border: 3px solid white;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    padding: 1.5rem;
+  }
 `;
 
 const FeatureHeader = styled.h2`
@@ -76,12 +96,20 @@ const FeatureHeader = styled.h2`
   text-align: center;
   font-weight: 600 !important;
   color: white !important;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    font-size: 1.2rem;
+  }
 `;
 
 const FeatureText = styled.h3`
   margin: 0.5rem;
   text-align: center;
   color: white !important;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    font-size: 1rem;
+  }
 `;
 
 export default ContactUs;
