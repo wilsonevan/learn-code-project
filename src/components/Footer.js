@@ -66,7 +66,7 @@ const FooterColumn = styled.div`
 `;
 
 const ListHeader = styled.h3`
-  color: ${GlobalColors.PrimaryGreen}; !important;
+  color: ${GlobalColors.PrimaryGreen} !important;
   margin: 0;
 `;
 
