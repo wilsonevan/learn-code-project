@@ -72,7 +72,7 @@ const PageContainer = styled.div`
   align-items: center;
   min-height: 70vh;
   width: 100vw;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 `;
 
 const OuterContainer = styled.div`

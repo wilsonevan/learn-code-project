@@ -163,7 +163,7 @@ const FeatureHeader = styled.h2`
   /* color: ${GlobalColors.PrimaryGreen}; */
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     width: 100%;
     margin: 0.5rem;
   }
@@ -177,7 +177,6 @@ const FeatureText = styled.h2`
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     font-size: 1.2rem;
     width: 100%;
-
   }
 `;
 

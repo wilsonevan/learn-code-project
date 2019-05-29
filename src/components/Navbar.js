@@ -4,7 +4,7 @@ import styled from "styled-components";
 // import "./HomeNav.css";
 import { Dropdown, Icon } from "semantic-ui-react";
 import { GlobalColors, GlobalSizes } from "../styles/GlobalStyles";
-import Logo from '../images/logo_transparent_updated.png'
+import Logo from "../images/logo_transparent_updated.png";
 
 const Navbar = props => {
   const [activeItem, setActiveItem] = useState(0);
@@ -99,54 +99,28 @@ const Navbar = props => {
             <Dropdown.Menu>
               <Dropdown.Item>
                 <NavLink to="/">
-                  {/* <MenuItem as={isActive(1)} onClick={() => activateItem(1)}> */}
                   <Item textColor={GlobalColors.PrimaryGrey}>Home</Item>
-                  {/* </MenuItem> */}
                 </NavLink>
               </Dropdown.Item>
               <Dropdown.Item>
-                <NavLink to="/how-it-works">
-                  {/* <MenuItem as={isActive(2)} onClick={() => activateItem(2)}> */}
-                  <Item textColor={GlobalColors.PrimaryGrey}>How It Works</Item>
-                  {/* </MenuItem> */}
+                <NavLink to="/use-cases">
+                  <Item textColor={GlobalColors.PrimaryGrey}>Use Cases</Item>
                 </NavLink>
               </Dropdown.Item>
               <Dropdown.Item>
-                <NavLink to="/gifts">
-                  {/* <MenuItem as={isActive(3)} onClick={() => activateItem(3)}> */}
-                  <Item textColor={GlobalColors.PrimaryGrey}>
-                    Corporate Gifts
-                  </Item>
-                  {/* </MenuItem> */}
+                <NavLink to="/documentation">
+                  <Item textColor={GlobalColors.PrimaryGrey}>Docs</Item>
+                </NavLink>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <NavLink to="/mission">
+                  <Item textColor={GlobalColors.PrimaryGrey}>Our Mission</Item>
                 </NavLink>
               </Dropdown.Item>
               <Dropdown.Item>
                 <NavLink to="/contact">
-                  {/* <MenuItem as={isActive(4)} onClick={() => activateItem(4)}> */}
-                  <Item textColor={GlobalColors.PrimaryGrey}>Contact Us</Item>
-                  {/* </MenuItem> */}
+                  <Item textColor={GlobalColors.PrimaryGrey}>Contact</Item>
                 </NavLink>
-              </Dropdown.Item>
-              <Dropdown.Item>
-                {/* <MenuItem> */}
-                <SupportLink
-                  href="https://audio-grenade.freshdesk.com/support/home"
-                  target="_blank"
-                >
-                  <Item textColor={GlobalColors.PrimaryGrey}>Support</Item>
-                </SupportLink>
-                {/* </MenuItem> */}
-              </Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Item>
-                <SupportLink
-                  href="https://audio-grenade.mybigcommerce.com/"
-                  // target="_blank"
-                >
-                  {/* <MenuItem> */}
-                  <Item textColor={GlobalColors.PrimaryGrey}>Shop</Item>
-                  {/* </MenuItem> */}
-                </SupportLink>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
@@ -191,6 +165,7 @@ const CompactNavContainer = styled.div`
   position: absolute;
   top: 2rem;
   right: 2rem;
+  z-index: 100;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     display: inline;

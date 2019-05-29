@@ -75,8 +75,8 @@ const PageContainer = styled.div`
 
 const OuterContainer = styled.div`
   position: absolute;
-  z-index: 100;
-  top: 15%;
+  z-index: 10;
+  top: 18%;
   left: 0;
   width: 70%;
   display: flex;
@@ -98,7 +98,7 @@ const OuterContainer = styled.div`
 
 const Header = styled.h1`
   /* background-color: ${GlobalColors.PrimaryWhite}; */
-  z-index: 2;
+  z-index: -2;
   text-align: center;
   margin: 0;
   font-size: 3rem !important;
@@ -121,7 +121,7 @@ const HeaderImage = styled.img`
   height: 140vh;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
-    opacity: 0.4;
+    opacity: 0.2;
   }
 `;
 
@@ -163,7 +163,7 @@ const FeatureIcon = styled.div``;
 const FeatureHeader = styled.h2`
   margin: 0.5rem;
   text-align: center;
-  font-weight: 600 !important;
+  font-weight: 900 !important;
   font-size: 1.5rem !important;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
@@ -179,6 +179,7 @@ const FeatureText = styled.h3`
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     font-size: 1rem;
+    font-weight: 600 !important;
   }
 `;
 export default UseCases;
