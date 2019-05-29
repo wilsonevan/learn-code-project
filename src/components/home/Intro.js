@@ -20,25 +20,25 @@ const Intro = () => {
         <RightTextContainer>
           <NavLink>
             <LinkContainer>
-              <Icon size="huge" name="slack" />
+              <Icon size={window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"} name="slack" />
               <LinkText>Join Slack</LinkText>
             </LinkContainer>
           </NavLink>
           <NavLink>
             <LinkContainer>
-              <Icon size="huge" name="github" />
+              <Icon size={window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"} name="github" />
               <LinkText>See us on GitHub</LinkText>
             </LinkContainer>
           </NavLink>
           <NavLink>
             <LinkContainer>
-              <Icon size="huge" name="rocket" />
+              <Icon size={window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"} name="rocket" />
               <LinkText>Start a New Project</LinkText>
             </LinkContainer>
           </NavLink>
           <NavLink>
             <LinkContainer>
-              <Icon size="huge" name="life ring outline" />
+              <Icon size={window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"} name="life ring outline" />
               <LinkText>Get Tech Support</LinkText>
             </LinkContainer>
           </NavLink>
@@ -125,7 +125,7 @@ const PrimaryText = styled.h1`
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     text-align: center;
-    font-size: 1.5rem !important;
+    font-size: 1.8rem !important;
   }
 `;
 
@@ -166,7 +166,7 @@ const SecondaryText = styled.h2`
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     text-align: center;
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
     font-weight: 400 !important;
   }
 `;
