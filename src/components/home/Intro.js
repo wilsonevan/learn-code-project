@@ -53,6 +53,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
   min-height: 80vh;
   width: 100vw;
   background-position: center;
@@ -65,6 +66,7 @@ const Container = styled.div`
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     justify-content: center;
     align-items: center;
+    margin-top: 8rem;
   }
 `;
 
@@ -75,6 +77,7 @@ const LeftTextContainer = styled.div`
   width: 50%;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    width: 80%;
   }
 `;
 
@@ -94,6 +97,7 @@ const InnerTextContainer = styled.div`
     text-align: center;
     justify-content: center;
     align-items: center;
+    padding: 1.5rem;
   }
 `;
 
@@ -108,7 +112,7 @@ const RightTextContainer = styled.div`
     text-align: center;
     margin: 0;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 80vw;
   }
 `;
@@ -121,6 +125,7 @@ const PrimaryText = styled.h1`
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     text-align: center;
+    font-size: 1.5rem !important;
   }
 `;
 
@@ -129,6 +134,14 @@ const LinkContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 1rem;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    padding: 0.5rem;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: left;
+    width: auto;
+  }
 `;
 
 const LinkText = styled.h2`
@@ -137,6 +150,12 @@ const LinkText = styled.h2`
   font-weight: 500 !important;
   margin: 0;
   padding-left: 0.5rem;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    text-align: left;
+    font-size: 1.5rem !important;
+    /* width: 100%; */
+  }
 `;
 
 const SecondaryText = styled.h2`
@@ -147,6 +166,8 @@ const SecondaryText = styled.h2`
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     text-align: center;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
   }
 `;
 

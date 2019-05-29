@@ -246,6 +246,11 @@ const CompanyName = styled.h1`
   margin: 0;
   padding-left: 1rem;
   letter-spacing: 0.5px !important;
+
+  @media (max-width: ${GlobalSizes.ScreenWidth}) {
+    font-size: 1.2rem !important;
+    width: 50%;
+  }
 `;
 
 const RightMenu = styled.div`
