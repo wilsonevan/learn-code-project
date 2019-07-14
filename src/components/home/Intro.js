@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
 import { Icon } from "semantic-ui-react";
+import { Heroku } from "grommet-icons";
 
 const Intro = () => {
   return (
@@ -17,28 +18,83 @@ const Intro = () => {
             </SecondaryText>
           </InnerTextContainer>
         </LeftTextContainer>
+        <ArrowContainer>
+        <Icon
+                size={
+                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "huge"
+                }
+                name="chevron right"
+              />
+        </ArrowContainer>
         <RightTextContainer>
-          <NavLink>
+          <NavLink
+            href=""
+            target="_blank"
+          >
             <LinkContainer>
-              <Icon size={window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"} name="slack" />
+              <Heroku
+                size="medium"
+
+                  // window.screen.width > GlobalSizes.ScreenWidth
+                  //   ? "xlarge"
+                  //   : "medium"
+                // }
+                style={{marginRight:"8px", marginLeft: "3px"}}
+                color={GlobalColors.PrimaryBlack}
+              />
+              <LinkText>Try a Demo</LinkText>
+            </LinkContainer>
+          </NavLink>
+          <NavLink
+            href="https://join.slack.com/t/code-learning-project/shared_invite/enQtNjk0MTIyODc2MTI4LTU4NjUxMGM2ZDI5NDYzZjMxNGIxMzMyODU3NzdlZjM1YmY2NmExNTFkMzNkMzU0NGQyMTE0YjQzMGU3YjY4NmM"
+            target="_blank"
+          >
+            <LinkContainer>
+              <Icon
+                size={
+                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
+                }
+                name="slack"
+              />
               <LinkText>Join Slack</LinkText>
             </LinkContainer>
           </NavLink>
-          <NavLink>
+          <NavLink
+            href="https://github.com/cortona-creative/code-learning-project"
+            target="_blank"
+          >
             <LinkContainer>
-              <Icon size={window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"} name="github" />
+              <Icon
+                size={
+                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
+                }
+                name="github"
+              />
               <LinkText>See us on GitHub</LinkText>
             </LinkContainer>
           </NavLink>
           <NavLink>
             <LinkContainer>
-              <Icon size={window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"} name="rocket" />
+              <Icon
+                size={
+                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
+                }
+                name="rocket"
+              />
               <LinkText>Start a New Project</LinkText>
             </LinkContainer>
           </NavLink>
-          <NavLink>
+          <NavLink
+            href="https://join.slack.com/t/code-learning-project/shared_invite/enQtNjk0MTIyODc2MTI4LTU4NjUxMGM2ZDI5NDYzZjMxNGIxMzMyODU3NzdlZjM1YmY2NmExNTFkMzNkMzU0NGQyMTE0YjQzMGU3YjY4NmM"
+            target="_blank"
+          >
             <LinkContainer>
-              <Icon size={window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"} name="life ring outline" />
+              <Icon
+                size={
+                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
+                }
+                name="life ring outline"
+              />
               <LinkText>Get Tech Support</LinkText>
             </LinkContainer>
           </NavLink>
@@ -51,7 +107,7 @@ const Intro = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   min-height: 80vh;
@@ -75,6 +131,8 @@ const LeftTextContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 50%;
+  margin: 20px;
+
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     width: 80%;
@@ -100,6 +158,10 @@ const InnerTextContainer = styled.div`
     padding: 1.5rem;
   }
 `;
+
+const ArrowContainer = styled.div`
+
+`
 
 const RightTextContainer = styled.div`
   display: flex;

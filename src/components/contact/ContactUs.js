@@ -16,7 +16,7 @@ const ContactUs = () => {
             </FeatureHeader>
             <FeatureText>
               The project is currently led by Cortona Creative and it's
-              Development Team
+              development team.
             </FeatureText>
           </InnerContainer>
         </OuterContainer>
