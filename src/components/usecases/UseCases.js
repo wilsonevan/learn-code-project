@@ -111,7 +111,7 @@ const Header = styled.h1`
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     text-align: center;
     font-size: 2.5rem !important;
-    width: 80%;
+    width: 80vw;
     margin: 0;
   }
 `;
@@ -183,7 +183,7 @@ const FeatureText = styled.h3`
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     font-size: 1rem;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
   }
 `;
 export default UseCases;

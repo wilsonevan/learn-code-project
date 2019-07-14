@@ -107,7 +107,7 @@ const FeatureText = styled.h3`
   font-weight: 500 !important;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
-    font-weight: 600 !important;
+    font-weight: 400 !important;
     font-size: 1rem;
   }
 `;

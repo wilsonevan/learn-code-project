@@ -130,7 +130,7 @@ const Header = styled.h1`
     padding: 1.5rem;
     text-align: center;
     font-size: 2.5rem !important;
-    width: 80%;
+    width: 80vw;
     border-top: 1px solid ${GlobalColors.SecondaryGreen};
   }
 `;
