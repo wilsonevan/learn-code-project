@@ -3,118 +3,141 @@ import styled from "styled-components";
 import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
 import { Icon } from "semantic-ui-react";
 import Image1 from "../../images/nesa-by-makers-736784-gradient.jpg";
+import { Fade } from "react-reveal";
 
 const Features = () => {
   return (
     <>
       <Container>
         <HeaderContainer>
-          <Header>Key Features</Header>
+          <Fade left duration={2500}>
+            <Header>Key Features</Header>
+          </Fade>
           <HeaderImage src={Image1} />
         </HeaderContainer>
-        <InnerContainer>
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon
-                size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                }
-                name="code"
-              />
-              {/* <SmallIcon size="huge" name="code" /> */}
-            </FeatureIcon>
-            <FeatureHeader>Code Text Editor</FeatureHeader>
-            <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
-            </FeatureText>
-          </FeatureContainer>
+        <Fade bottom duration={3500}>
+          <InnerContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="code"
+                />
+                {/* <SmallIcon size="huge" name="code" /> */}
+              </FeatureIcon>
+              <FeatureHeader>Code Text Editor</FeatureHeader>
+              <FeatureText>
+                Integrated text editor with syntax recommendations used for
+                easily typing and grading code for quiz questions and
+                assignments.
+              </FeatureText>
+            </FeatureContainer>
 
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon
-                size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                }
-                name="help"
-              />
-              {/* <SmallIcon size="huge" name="help" /> */}
-            </FeatureIcon>
-            <FeatureHeader>Student Help Portal</FeatureHeader>
-            <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
-            </FeatureText>
-          </FeatureContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="help"
+                />
+                {/* <SmallIcon size="huge" name="help" /> */}
+              </FeatureIcon>
+              <FeatureHeader>Student Help Portal</FeatureHeader>
+              <FeatureText>
+                Integrated text editor with syntax recommendations used for
+                easily typing and grading code for quiz questions and
+                assignments.
+              </FeatureText>
+            </FeatureContainer>
 
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon
-                size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                }
-                name="chart area"
-              />
-              {/* <SmallIcon size="huge" name="chart area" /> */}
-            </FeatureIcon>
-            <FeatureHeader>Grading Trends & Analytics</FeatureHeader>
-            <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
-            </FeatureText>
-          </FeatureContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="chart area"
+                />
+                {/* <SmallIcon size="huge" name="chart area" /> */}
+              </FeatureIcon>
+              <FeatureHeader>Grading Trends & Analytics</FeatureHeader>
+              <FeatureText>
+                Integrated text editor with syntax recommendations used for
+                easily typing and grading code for quiz questions and
+                assignments.
+              </FeatureText>
+            </FeatureContainer>
 
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon
-                size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                }
-                name="code branch"
-              />
-              {/* <SmallIcon size="huge" name="code branch" /> */}
-            </FeatureIcon>
-            <FeatureHeader>Easy-to-Use Attendance</FeatureHeader>
-            <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
-            </FeatureText>
-          </FeatureContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="code branch"
+                />
+                {/* <SmallIcon size="huge" name="code branch" /> */}
+              </FeatureIcon>
+              <FeatureHeader>Easy-to-Use Attendance</FeatureHeader>
+              <FeatureText>
+                Integrated text editor with syntax recommendations used for
+                easily typing and grading code for quiz questions and
+                assignments.
+              </FeatureText>
+            </FeatureContainer>
 
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon
-                size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                }
-                name="calendar alternate outline"
-              />
-              {/* <SmallIcon size="huge" name="calendar alternate outline" /> */}
-            </FeatureIcon>
-            <FeatureHeader>Advanced Course Calendar Views</FeatureHeader>
-            <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
-            </FeatureText>
-          </FeatureContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="calendar alternate outline"
+                />
+                {/* <SmallIcon size="huge" name="calendar alternate outline" /> */}
+              </FeatureIcon>
+              <FeatureHeader>Advanced Course Calendar Views</FeatureHeader>
+              <FeatureText>
+                Integrated text editor with syntax recommendations used for
+                easily typing and grading code for quiz questions and
+                assignments.
+              </FeatureText>
+            </FeatureContainer>
 
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon
-                size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                }
-                name="laptop"
-              />
-              {/* <SmallIcon size="huge" name="laptop" /> */}
-            </FeatureIcon>
-            <FeatureHeader>Direct GitHub Repo Submissions</FeatureHeader>
-            <FeatureText>
-              Integrated text editor with syntax recommendations used for easily
-              typing and grading code for quiz questions and assignments.
-            </FeatureText>
-          </FeatureContainer>
-        </InnerContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="laptop"
+                />
+                {/* <SmallIcon size="huge" name="laptop" /> */}
+              </FeatureIcon>
+              <FeatureHeader>Direct GitHub Repo Submissions</FeatureHeader>
+              <FeatureText>
+                Integrated text editor with syntax recommendations used for
+                easily typing and grading code for quiz questions and
+                assignments.
+              </FeatureText>
+            </FeatureContainer>
+          </InnerContainer>
+        </Fade>
       </Container>
     </>
   );
@@ -132,7 +155,6 @@ const Container = styled.div`
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     padding-top: 1rem;
     align-items: center;
-
   }
 `;
 

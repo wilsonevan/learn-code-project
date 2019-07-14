@@ -3,39 +3,38 @@ import styled from "styled-components";
 import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
 import { Icon } from "semantic-ui-react";
 import Image1 from "../../images/architecture-buildings-city-325185-gradient.jpg";
+import { Fade } from "react-reveal";
 
 const Mission = () => {
   return (
     <>
       <BGImage />
+
       <PageContainer>
-        <Header>Our Mission</Header>
-        <InnerContainer>
-          <FeatureText>
-            After working together as students, TA’s, and teachers, we all found
-            that we were not happy with the current learning management systems
-            out there. So many are designed for people who don’t know how to
-            code, and many of their core features are either locked down or
-            challenging to use.
-          </FeatureText>
-          <FeatureText>
-            We decided to launch our own learning management system, but soon
-            realized that our needs may be different from other organizations,
-            and in the nature of improving the local coding community as a
-            whole, decided to launch this open-source project. This allows all
-            bootcamps and organizations to work together and build tools that
-            help everybody learn more effectively.
-          </FeatureText>
-          {/* <FeatureText>
-            We also found that there were a significant amount of recent
-            graduates who were looking to expand their portfolios, and had a
-            tremendous amount of critical feedback for the learning process at
-            our bootcamp, as well as a passion to improve the learning
-            experience for all. This creates a unique atmosphere with this
-            project where developers and organizations mutually benefit from
-            this collaborative effort.
-          </FeatureText> */}
-        </InnerContainer>
+        {/* <Fade duration={3500}> */}
+        <Fade bottom cascade duration={3500}>
+          <Header>Our Mission</Header>
+          {/* </Fade> */}
+          {/* <Fade> */}
+          <InnerContainer>
+            <FeatureText>
+              After working together as students, TA’s, and teachers, we all
+              found that we were not happy with the current learning management
+              systems out there. So many are designed for people who don’t know
+              how to code, and many of their core features are either locked
+              down or challenging to use.
+            </FeatureText>
+            <FeatureText>
+              We decided to launch our own learning management system, but soon
+              realized that our needs may be different from other organizations,
+              and in the nature of improving the local coding community as a
+              whole, decided to launch this open-source project. This allows all
+              bootcamps and organizations to work together and build tools that
+              help everybody learn more effectively.
+            </FeatureText>
+          </InnerContainer>
+          {/* </Fade> */}
+        </Fade>
       </PageContainer>
     </>
   );
@@ -88,18 +87,17 @@ const BGImage = styled.div`
 
 const InnerContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
 
   /* height: 100vh; */
-  width: 60%;
+  width: 60vw;
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
-    width: 80%;
+    width: 80vw;
   }
 `;
 
@@ -113,4 +111,5 @@ const FeatureText = styled.h3`
     font-size: 1rem;
   }
 `;
+
 export default Mission;
