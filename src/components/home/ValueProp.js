@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
 import { Icon } from "semantic-ui-react";
 import Image1 from "../../images/adult-blur-business-2102416-gradient.jpg";
+import { Fade } from "react-reveal";
 
 const ValueProp = () => {
   return (
@@ -10,55 +11,59 @@ const ValueProp = () => {
       <PageContainer>
         <HeaderImage src={Image1} />
         <OuterContainer>
-          <Header>Improving the Bootcamp Experience</Header>
-          <InnerContainer>
-            <FeatureContainer>
-              {/* <FeatureIcon>
+          <Fade right duration={2000}>
+            <Header>Improving the Bootcamp Experience</Header>
+          </Fade>
+          <Fade bottom duration={2500}>
+            <InnerContainer>
+              <FeatureContainer>
+                {/* <FeatureIcon>
                 <Icon size="huge" name="code" />
               </FeatureIcon> */}
-              <FeatureHeader>Collaborative</FeatureHeader>
-              <FeatureText>
-                A free, collaborative project for all students and developers.
-                Designed to enhance the learning process for those learning code
-                around the world.
-              </FeatureText>
-            </FeatureContainer>
+                <FeatureHeader>Collaborative</FeatureHeader>
+                <FeatureText>
+                  A free, collaborative project for all students and developers.
+                  Designed to enhance the learning process for those learning
+                  code around the world.
+                </FeatureText>
+              </FeatureContainer>
 
-            <FeatureContainer>
-              {/* <FeatureIcon>
+              <FeatureContainer>
+                {/* <FeatureIcon>
                 <Icon size="huge" name="assistive listening systems" />
               </FeatureIcon> */}
-              <FeatureHeader>High Value</FeatureHeader>
-              <FeatureText>
-                Create your own LMS instance and host it yourself, then
-                customize it specifically for your organization. Our large code
-                base allows developers to easily pick and choose the features
-                they want to enable.
-              </FeatureText>
-            </FeatureContainer>
+                <FeatureHeader>High Value</FeatureHeader>
+                <FeatureText>
+                  Create your own LMS instance and host it yourself, then
+                  customize it specifically for your organization. Our large
+                  code base allows developers to easily pick and choose the
+                  features they want to enable.
+                </FeatureText>
+              </FeatureContainer>
 
-            <FeatureContainer>
-              {/* <FeatureIcon>
+              <FeatureContainer>
+                {/* <FeatureIcon>
                 <Icon size="huge" name="chart area" />
               </FeatureIcon> */}
-              <FeatureHeader>Scalable</FeatureHeader>
-              <FeatureText>
-                Our free framework can be hosted on low-cost servers for those
-                who are starting out, and grow with your organization.
-              </FeatureText>
-            </FeatureContainer>
+                <FeatureHeader>Scalable</FeatureHeader>
+                <FeatureText>
+                  Our free framework can be hosted on low-cost servers for those
+                  who are starting out, and grow with your organization.
+                </FeatureText>
+              </FeatureContainer>
 
-            <FeatureContainer>
-              {/* <FeatureIcon>
+              <FeatureContainer>
+                {/* <FeatureIcon>
                 <Icon size="huge" name="code branch" />
               </FeatureIcon> */}
-              <FeatureHeader>Simple Setup</FeatureHeader>
-              <FeatureText>
-                Download and install it on your own, or let us build and set it
-                up for you!
-              </FeatureText>
-            </FeatureContainer>
-          </InnerContainer>
+                <FeatureHeader>Simple Setup</FeatureHeader>
+                <FeatureText>
+                  Download and install it on your own, or let us build and set
+                  it up for you!
+                </FeatureText>
+              </FeatureContainer>
+            </InnerContainer>
+          </Fade>
         </OuterContainer>
       </PageContainer>
     </>
@@ -119,7 +124,7 @@ const InnerContainer = styled.div`
   padding-bottom: 3rem;
 
   /* height: 100vh; */
-  width: 100%;  
+  width: 100%;
 `;
 
 const FeatureContainer = styled.div`
@@ -132,7 +137,6 @@ const FeatureContainer = styled.div`
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   /* flex: 1 0 34%; */
-
 `;
 
 const FeatureIcon = styled.div``;

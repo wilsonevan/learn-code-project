@@ -2,58 +2,78 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
 import { Icon } from "semantic-ui-react";
+import { Fade, Zoom } from "react-reveal";
 
 const ValueProp = () => {
   return (
     <>
       <Container>
-        <Header>Join Our Community!</Header>
-        <Footnote weight={"bold"}>
-          We are excited to be launching this project as of June 2019!
-        </Footnote>
-        <Footnote>
-          It has been a work in progress for several months now and is now ready
-          for collaborators to join in.
-        </Footnote>
-        <Footnote>
-          All are welcome to work together with us in order to improve the
-          experience for all new members who want to learn to code.
-        </Footnote>
-        <InnerContainer>
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon
-                size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                }
-                name="history"
-              />
-            </FeatureIcon>
-            <FeatureHeader>755</FeatureHeader>
-            <FeatureText>Commits</FeatureText>
-          </FeatureContainer>
+        <Fade duration={3500}>
+          <Header>Join Our Community!</Header>
+        </Fade>
+        <Fade duration={4500} cascade>
+          <FootnoteContainer>
+            <Footnote weight={"bold"}>
+              We are excited to be launching this project as of June 2019!
+            </Footnote>
+            <Footnote>
+              It has been a work in progress for several months now and is now
+              ready for collaborators to join in.
+            </Footnote>
+            <Footnote>
+              All are welcome to work together with us in order to improve the
+              experience for all new members who want to learn to code.
+            </Footnote>
+          </FootnoteContainer>
+        </Fade>
+        <Fade cascade duration={3500}>
+          <InnerContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="history"
+                />
+              </FeatureIcon>
+              <FeatureHeader>755</FeatureHeader>
+              <FeatureText>Commits</FeatureText>
+            </FeatureContainer>
 
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                } name="users" />
-            </FeatureIcon>
-            <FeatureHeader>6</FeatureHeader>
-            <FeatureText>Contributors</FeatureText>
-          </FeatureContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="users"
+                />
+              </FeatureIcon>
+              <FeatureHeader>6</FeatureHeader>
+              <FeatureText>Contributors</FeatureText>
+            </FeatureContainer>
 
-          <FeatureContainer>
-            <FeatureIcon>
-              <Icon size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                } name="slack hash" />
-            </FeatureIcon>
-            <FeatureHeader>6</FeatureHeader>
-            <FeatureText>Slack Members</FeatureText>
-          </FeatureContainer>
+            <FeatureContainer>
+              <FeatureIcon>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="slack hash"
+                />
+              </FeatureIcon>
+              <FeatureHeader>6</FeatureHeader>
+              <FeatureText>Slack Members</FeatureText>
+            </FeatureContainer>
 
-          {/* <FeatureContainer>
+            {/* <FeatureContainer>
             <FeatureIcon>
               <Icon size="huge" name="star outline" />
             </FeatureIcon>
@@ -84,7 +104,8 @@ const ValueProp = () => {
               Downloads
             </FeatureText>
           </FeatureContainer> */}
-        </InnerContainer>
+          </InnerContainer>
+        </Fade>
       </Container>
     </>
   );
@@ -109,10 +130,17 @@ const Header = styled.h1`
     padding: 1.5rem;
     text-align: center;
     font-size: 2.5rem !important;
-    width: 80%;
+    width: 80vw;
     border-top: 1px solid ${GlobalColors.SecondaryGreen};
   }
 `;
+
+const FootnoteContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 
 const Footnote = styled.h2`
   margin: 0.3rem;

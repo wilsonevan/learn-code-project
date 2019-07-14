@@ -3,50 +3,54 @@ import styled from "styled-components";
 import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
 import { Icon } from "semantic-ui-react";
 import Image1 from "../../images/sebastian-mantel-105235-unsplash-cropped-gradient.jpg";
+import { Fade } from "react-reveal";
 
 const UseCases = () => {
   return (
     <>
       <PageContainer>
         <OuterContainer>
-          <Header>Let's do better, together.</Header>
-          <InnerContainer>
-            <FeatureContainer>
-              <FeatureHeader>Current LMS not enough?</FeatureHeader>
-              <FeatureText>
-                Our Componetized features allow for easily implementing features
-                designed with coding in mind.
-              </FeatureText>
-            </FeatureContainer>
+          <Fade bottom cascade duration={3500}>
+            <Header>Let's do better, together.</Header>
+            <InnerContainer>
+              <FeatureContainer>
+                <FeatureHeader>Current LMS not enough?</FeatureHeader>
+                <FeatureText>
+                  Our Componetized features allow for easily implementing
+                  features designed with coding in mind.
+                </FeatureText>
+              </FeatureContainer>
 
-            <FeatureContainer>
-              <FeatureHeader>
-                Want to save on costs by hosting your own site?
-              </FeatureHeader>
-              <FeatureText>
-                Create your own LMS instance and host it yourself, then
-                customize it specifically for your organization. Our large code
-                base allows developers to easily pick and choose the features
-                they want to enable.
-              </FeatureText>
-            </FeatureContainer>
+              <FeatureContainer>
+                <FeatureHeader>
+                  Want to save on costs by hosting your own site?
+                </FeatureHeader>
+                <FeatureText>
+                  Create your own LMS instance and host it yourself, then
+                  customize it specifically for your organization. Our large
+                  code base allows developers to easily pick and choose the
+                  features they want to enable.
+                </FeatureText>
+              </FeatureContainer>
 
-            <FeatureContainer>
-              <FeatureHeader>
-                Looking for features unique to your own organization?
-              </FeatureHeader>
-              <FeatureText>
-                Build your own features and choose whether or not to share them
-              </FeatureText>
-            </FeatureContainer>
+              <FeatureContainer>
+                <FeatureHeader>
+                  Looking for features unique to your own organization?
+                </FeatureHeader>
+                <FeatureText>
+                  Build your own features and choose whether or not to share
+                  them
+                </FeatureText>
+              </FeatureContainer>
 
-            <FeatureContainer>
-              <FeatureHeader>
-                Prefer to have some help launching your own LMS?
-              </FeatureHeader>
-              <FeatureText>Our team can help!</FeatureText>
-            </FeatureContainer>
-          </InnerContainer>
+              <FeatureContainer>
+                <FeatureHeader>
+                  Prefer to have some help launching your own LMS?
+                </FeatureHeader>
+                <FeatureText>Our team can help!</FeatureText>
+              </FeatureContainer>
+            </InnerContainer>
+          </Fade>
         </OuterContainer>
         <HeaderImage src={Image1} />
       </PageContainer>
@@ -107,7 +111,7 @@ const Header = styled.h1`
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     text-align: center;
     font-size: 2.5rem !important;
-    width: 80%;
+    width: 80vw;
     margin: 0;
   }
 `;
@@ -136,7 +140,7 @@ const InnerContainer = styled.div`
   z-index: 10;
 
   min-height: 70vh;
-  width: 80%;
+  width: 80vw;  
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     padding: 0;
@@ -148,7 +152,7 @@ const FeatureContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 49%;
+  width: 35%;
   min-width: 20rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -179,7 +183,7 @@ const FeatureText = styled.h3`
 
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     font-size: 1rem;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
   }
 `;
 export default UseCases;

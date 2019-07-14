@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { GlobalColors, GlobalSizes } from "../../styles/GlobalStyles";
 import { Icon } from "semantic-ui-react";
 import { Heroku } from "grommet-icons";
+import { Fade, Zoom } from "react-reveal";
 
 const Intro = () => {
   return (
@@ -18,87 +19,94 @@ const Intro = () => {
             </SecondaryText>
           </InnerTextContainer>
         </LeftTextContainer>
-        <ArrowContainer>
-        <Icon
-                size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "huge"
-                }
-                name="chevron right"
-              />
-        </ArrowContainer>
-        <RightTextContainer>
-          <NavLink
-            href=""
-            target="_blank"
-          >
-            <LinkContainer>
-              <Heroku
-                size="medium"
+        <Fade right duration={2500}>
+          <ArrowContainer>
+            <Icon
+              size={
+                window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "huge"
+              }
+              name="chevron right"
+            />
+          </ArrowContainer>
 
+          <RightTextContainer>
+            <NavLink href="" target="_blank">
+              <LinkContainer>
+                <Heroku
+                  size="medium"
                   // window.screen.width > GlobalSizes.ScreenWidth
                   //   ? "xlarge"
                   //   : "medium"
-                // }
-                style={{marginRight:"8px", marginLeft: "3px"}}
-                color={GlobalColors.PrimaryBlack}
-              />
-              <LinkText>Try a Demo</LinkText>
-            </LinkContainer>
-          </NavLink>
-          <NavLink
-            href="https://join.slack.com/t/code-learning-project/shared_invite/enQtNjk0MTIyODc2MTI4LTU4NjUxMGM2ZDI5NDYzZjMxNGIxMzMyODU3NzdlZjM1YmY2NmExNTFkMzNkMzU0NGQyMTE0YjQzMGU3YjY4NmM"
-            target="_blank"
-          >
-            <LinkContainer>
-              <Icon
-                size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                }
-                name="slack"
-              />
-              <LinkText>Join Slack</LinkText>
-            </LinkContainer>
-          </NavLink>
-          <NavLink
-            href="https://github.com/cortona-creative/code-learning-project"
-            target="_blank"
-          >
-            <LinkContainer>
-              <Icon
-                size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                }
-                name="github"
-              />
-              <LinkText>See us on GitHub</LinkText>
-            </LinkContainer>
-          </NavLink>
-          <NavLink>
-            <LinkContainer>
-              <Icon
-                size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                }
-                name="rocket"
-              />
-              <LinkText>Start a New Project</LinkText>
-            </LinkContainer>
-          </NavLink>
-          <NavLink
-            href="https://join.slack.com/t/code-learning-project/shared_invite/enQtNjk0MTIyODc2MTI4LTU4NjUxMGM2ZDI5NDYzZjMxNGIxMzMyODU3NzdlZjM1YmY2NmExNTFkMzNkMzU0NGQyMTE0YjQzMGU3YjY4NmM"
-            target="_blank"
-          >
-            <LinkContainer>
-              <Icon
-                size={
-                  window.screen.width > GlobalSizes.ScreenWidth ? "huge" : "big"
-                }
-                name="life ring outline"
-              />
-              <LinkText>Get Tech Support</LinkText>
-            </LinkContainer>
-          </NavLink>
-        </RightTextContainer>
+                  // }
+                  style={{ marginRight: "8px", marginLeft: "3px" }}
+                  color={GlobalColors.PrimaryBlack}
+                />
+                <LinkText>Try a Demo</LinkText>
+              </LinkContainer>
+            </NavLink>
+            <NavLink
+              href="https://join.slack.com/t/code-learning-project/shared_invite/enQtNjk0MTIyODc2MTI4LTU4NjUxMGM2ZDI5NDYzZjMxNGIxMzMyODU3NzdlZjM1YmY2NmExNTFkMzNkMzU0NGQyMTE0YjQzMGU3YjY4NmM"
+              target="_blank"
+            >
+              <LinkContainer>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="slack"
+                />
+                <LinkText>Join Slack</LinkText>
+              </LinkContainer>
+            </NavLink>
+            <NavLink
+              href="https://github.com/cortona-creative/code-learning-project"
+              target="_blank"
+            >
+              <LinkContainer>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="github"
+                />
+                <LinkText>See us on GitHub</LinkText>
+              </LinkContainer>
+            </NavLink>
+            <NavLink>
+              <LinkContainer>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="rocket"
+                />
+                <LinkText>Start a New Project</LinkText>
+              </LinkContainer>
+            </NavLink>
+            <NavLink
+              href="https://join.slack.com/t/code-learning-project/shared_invite/enQtNjk0MTIyODc2MTI4LTU4NjUxMGM2ZDI5NDYzZjMxNGIxMzMyODU3NzdlZjM1YmY2NmExNTFkMzNkMzU0NGQyMTE0YjQzMGU3YjY4NmM"
+              target="_blank"
+            >
+              <LinkContainer>
+                <Icon
+                  size={
+                    window.screen.width > GlobalSizes.ScreenWidth
+                      ? "huge"
+                      : "big"
+                  }
+                  name="life ring outline"
+                />
+                <LinkText>Get Tech Support</LinkText>
+              </LinkContainer>
+            </NavLink>
+          </RightTextContainer>
+        </Fade>
       </Container>
     </>
   );
@@ -133,7 +141,6 @@ const LeftTextContainer = styled.div`
   width: 50%;
   margin: 20px;
 
-
   @media (max-width: ${GlobalSizes.ScreenWidth}) {
     width: 80%;
   }
@@ -159,9 +166,7 @@ const InnerTextContainer = styled.div`
   }
 `;
 
-const ArrowContainer = styled.div`
-
-`
+const ArrowContainer = styled.div``;
 
 const RightTextContainer = styled.div`
   display: flex;

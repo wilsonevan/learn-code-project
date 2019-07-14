@@ -6,6 +6,7 @@ import Image1 from "../../images/advice-advise-advisor-7075-gradient.jpg";
 import ReactLogo from "../../images/react-logo.png";
 import RailsLogo from "../../images/ruby-on-rails-logo.png";
 import { Link } from "react-router-dom";
+import { Fade } from "react-reveal";
 
 const Overview = () => {
   return (
@@ -13,24 +14,29 @@ const Overview = () => {
       <PageContainer>
         <BGImage />
         <InnerContainer>
-          <FeatureContainer>
-            <Header>Modern framework for modern learning</Header>
-            <FeatureHeader>Built on:</FeatureHeader>
-            <DetailsContainer>
-              <Logo src={ReactLogo} height={"7rem"} />
-              <Logo src={RailsLogo} height={"6rem"} bottom={"2rem"} />
-            </DetailsContainer>
-          </FeatureContainer>
-          <FeatureContainer>
-            <Header>
-              Building positive flows to help developers learn more effectively
-            </Header>
-            <Link to="use-cases">
-              <Button>
-                <FeatureText>Learn More</FeatureText>
-              </Button>
-            </Link>
-          </FeatureContainer>
+          <Fade bottom duration={3500}>
+            <FeatureContainer>
+              <Header>Modern framework for modern learning</Header>
+              <FeatureHeader>Built on:</FeatureHeader>
+              <DetailsContainer>
+                <Logo src={ReactLogo} height={"7rem"} />
+                <Logo src={RailsLogo} height={"6rem"} bottom={"2rem"} />
+              </DetailsContainer>
+            </FeatureContainer>
+          </Fade>
+          <Fade bottom duration={3500}>
+            <FeatureContainer>
+              <Header>
+                Building positive flows to help developers learn more
+                effectively
+              </Header>
+              <Link to="use-cases">
+                <Button>
+                  <FeatureText>Learn More</FeatureText>
+                </Button>
+              </Link>
+            </FeatureContainer>
+          </Fade>
         </InnerContainer>
       </PageContainer>
     </>
@@ -116,7 +122,7 @@ const FeatureContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 40%;
+  width: 40vw;
   min-width: 30rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
